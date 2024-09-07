@@ -1,0 +1,132 @@
+.main-bg{
+    height: 100vh;
+    width:100%;
+    /* background-color: red; */
+}
+.ele-container{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index-logo{
+    margin: auto;
+    position:relative; 
+    /* height: 10rem; */
+    /* width: 25rem; */
+    scale: 1.3;
+    /* position: absolute; */
+    z-index: 3;
+    margin: 15rem 0 0 2.2rem;
+    align-items:end;
+}
+.logo-container{
+    margin: auto;
+    /* position: absolute; */
+    /* background-color: yellow; */
+}
+.alarm{
+    /* height: 1rem; */
+    /* width: 1rem; */
+    /* background-color : rgb(126, 211, 236); */
+    /* background: transparent; */
+    position: absolute;
+    /* opacity: 20%; */
+    margin: 45% 0 0 2rem;
+    z-index: 3;
+    color: #FFFFFF;
+    /* scale: .16; */
+    /* opacity: 20%; */
+}
+.pomo{
+    height: 3rem;
+    background-color: white;
+    width: 13rem;
+    border-radius: 12px;
+    position: absolute;
+    /* opacity: 20%; */
+    z-index: 3;
+    color: rgb(231, 33, 99);
+    text-align: center;
+    padding-top: .9rem;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    margin: 43% 0rem 0 -1rem;
+    /* scale: .16; */
+    transition: .6s;
+}
+.pomo:hover{
+    color: orange;
+    transition: ease-in-out;
+    width: 15rem;
+}
+.timer{
+    /* height: 5rem; */
+    opacity: 20%;
+    scale: .16;
+    /* width: 25rem; */
+    position: absolute;
+    z-index: 2;
+    margin: -0rem -24rem 0 0rem;
+}
+
+.alarm:hover, .timer:hover, .pomo:hover{
+    opacity: 100%;
+    cursor: pointer;
+    transition: .3s;
+}
+.daily-planner{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 18px;
+    font-style: italicś;
+    font-family: system-ui;
+    margin: 4rem 0 0 0rem;
+}
+
+.get-started {
+  background: #5E5DF0;
+  border-radius: 6px;
+  box-shadow: #5d7ff0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 6rem;
+  opacity: 95%;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+    scale: 1.3;
+    border: 0;
+}
+.get-started:hover{
+    outline:1px solid white;
+}
+.add-task{
+    scale: 1.1;
+    position: absolute;
+    margin:4rem;
+    /* opacity: 90%; */
+}
+.remove-task{
+    /* opacity: 80%; */
+    display: flex;
+    align-self: flex-end;
+  box-shadow: #f0735d 0 10px 20px -10px;
+
+    background-color: red;
+    scale: 1.1;
+    position: absolute;
+    margin:4rem 0 0 11.7rem;
+}
