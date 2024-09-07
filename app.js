@@ -151,6 +151,7 @@ localStorage.setItem('allTasks',JSON.stringify(allTasks))
 }
 const darkModeSet =  function(){
     darkMode.style.display = 'none'
+const body = document.querySelector('body')
     LightMode.style.display = 'block'
     // document.getElementsByName('placeholder').style.color = 'red'
     taskPanel1.classList.add('panel1Dark')
