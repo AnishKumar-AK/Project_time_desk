@@ -1,8 +1,9 @@
 const Today = document.querySelector('.time-current')
 const zoomed = document.querySelector('.zoom-features')
-const startTimer = document.querySelector('.stop-w-start')
-const stopTimer = document.querySelector('.stop-w-stop')
-const resetTimer = document.querySelector('.stop-w-reset')
+const startTimer = document.querySelectorAll('.stop-w-start')
+const stopTimer = document.querySelectorAll('.stop-w-stop')
+const resetTimer = document.querySelectorAll('.stop-w-reset')
+const secondStopW    = document.querySelector('.stop-w-second')
 const TimerRender = document.querySelector('.timer-count')
 const TimeZoomBtn = document.querySelector('.time-zoom')
 const ZoomCloseBtn = document.querySelector('.closebtn')
@@ -17,8 +18,19 @@ const ToolsBtn = document.querySelector('.tools')
 const darkMode = document.querySelector('.Dark-Light-mode')
 const LightMode = document.querySelector('.Dark-Light-mode2')
 const taskPanel1 = document.querySelector('.panel1')
+const loading = document.querySelector('.loading')
+const zoomTimer = document.querySelector('.zoom-timer-btn')
+const zoomStopW = document.querySelector('.zoom-stop-w-btn')
+const zoomPomo = document.querySelector('.zoom-pomo-btn')
+const toolsClosebtn = document.querySelector('.Close-tools')
+const colorPalet = document.querySelectorAll('.color1')
+const colorPanel = document.querySelector('.color-panel')
 
+loading.style.display = 'block'
 
+setTimeout(() => {
+try {
+loading.style.display = 'none'
 
 // const snow = document.querySelector('.snow')
 // const mainTag = document.querySelector('.Main')
@@ -152,6 +164,7 @@ localStorage.setItem('allTasks',JSON.stringify(allTasks))
 const darkModeSet =  function(){
     darkMode.style.display = 'none'
 const body = document.querySelector('body')
+
     LightMode.style.display = 'block'
     // document.getElementsByName('placeholder').style.color = 'red'
     taskPanel1.classList.add('panel1Dark')
@@ -304,17 +317,19 @@ const repeat = () => {
 }
 repeat();
 // console.log(allTasks.inputDiv1);
-startTimer.addEventListener('click', () =>{
+startTimer.forEach((e) =>{
+e.addEventListener('click', () =>{
     // let counter = 0;
     setTimeout(() => {
         document.querySelector('.stop-w-heading').style.opacity="0%"
     }, 200);
     if(holdCount == 0){
     var  hello =   startOne()
-    console.log('timer start');
-    
+    console.log('timer start'); 
     }
-    stopTimer.addEventListener('click', () => {
+    stopTimer.forEach((e) =>{
+
+    e.addEventListener('click', () => {
         clearInterval(hello)
         SecondsTimercounter = +SecondsTimercounter
         holdCount=0
@@ -323,7 +338,9 @@ startTimer.addEventListener('click', () =>{
         
         // SecondsTimercounter = 0
     })
-    resetTimer.addEventListener('click', () => {
+})
+    resetTimer.forEach((e) =>{
+    e.addEventListener('click', () => {
         clearInterval(hello);
         console.log('timer reset successful');
         
@@ -331,8 +348,11 @@ startTimer.addEventListener('click', () =>{
         holdCount = 0
         MinutesTimercounter = 0
         TimerRender.innerHTML = '00:00'
+        secondStopW.innerHTML = '00:00'
     })
+})
 });
+})
 const startOne = () => {
     if (MinutesTimercounter == 0 || MinutesTimercounter == '00') {
         MinutesTimercounter = seconds00[+MinutesTimercounter]
@@ -348,6 +368,7 @@ const startOne = () => {
             // TimerRender.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
         }
         TimerRender.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
+        secondStopW.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
         // console.log(MinutesTimercounter);
         if ( SecondsTimercounter > 59) {
             SecondsTimercounter = 0;
@@ -362,32 +383,45 @@ const startOne = () => {
             TimerRender.style.margin = '11rem 0 0 35%';
             document.querySelector(".minutes-heading").style.margin = "13rem 0 0 66%"
             TimerRender.innerHTML = `${MinutesTimercounter}`
+            secondStopW.innerHTML = `${MinutesTimercounter}`
+
         }
         if(MinutesTimercounter > 99){
             console.log('minutes shifted successfully');
             TimerRender.style.margin = '11rem 0 0 27%';
             document.querySelector(".minutes-heading").style.margin = "13rem 0 0 76%"
             TimerRender.innerHTML = `${MinutesTimercounter}`
+            secondStopW.innerHTML = `${MinutesTimercounter}`
+
+
         }
         if(MinutesTimercounter > 999){
             console.log('minutes shifted successfully');
             TimerRender.style.margin = '11rem 0 0 22%';
             document.querySelector(".minutes-heading").style.margin = "13rem 0 0 86%"
             TimerRender.innerHTML = `${MinutesTimercounter}`
+            secondStopW.innerHTML = `${MinutesTimercounter}`
+
         }
     },1000)
     return thisinterval;
 }
 TimeZoomBtn.addEventListener('click', () =>{
     console.log('study mode active');
-    
-    studyMode.style.display = 'block'
+    loading.style.display = 'block'
+    setTimeout(() => {
+        loading.style.display = 'none'
+        studyMode.style.display = 'block'
+    }, 900);
     // allTasks.colorChanged = 
 })
 ZoomCloseBtn.addEventListener('click', () =>{
     console.log('study mode inactive');
-    
-    document.querySelector('.study-mode').style.display = 'none'
+    loading.style.display = 'block'
+    setTimeout(() => {
+        loading.style.display = 'none'
+        document.querySelector('.study-mode').style.display = 'none'
+    }, 800);
 })
 let closebtnHold = 0
 window.addEventListener('mousemove', () =>{                 // window event to control zoom screen flow
@@ -406,7 +440,14 @@ if(allTasks.valueofn>5){
 }
 const btnopacity = function (){            // function to control close button opacity
     ZoomCloseBtn.style.opacity= '50%'
+    zoomTimer.style.opacity= '50%'
+    zoomStopW.style.opacity= '50%'
+    zoomPomo.style.opacity= '50%'
+    
     setTimeout(() => {
+        zoomTimer.style.opacity= '0%'
+        zoomStopW.style.opacity= '0%'
+        zoomPomo.style.opacity= '0%'
         ZoomCloseBtn.style.opacity= '0%'
         closebtnHold=0
     },3500);
@@ -521,7 +562,7 @@ const addInputBox = () =>{                  // function to create inout div #
         let inputBox = document.createElement('input')
         inputBox.classList.add('input-css')
         inputBox.setAttribute('id',`input${allTasks.valueofn}`)
-        inputBox.placeholder = 'Type...............................'
+        inputBox.placeholder = 'Enter Your Task Here...'
         inputDiv.classList.add('Input-box-div')
         inputContainer.append(inputDiv)
         inputDiv.appendChild(inputBox)
@@ -556,8 +597,6 @@ const addInputBox = () =>{                  // function to create inout div #
 //         console.log('jasljdl');
 //     })
 // })
-const colorPalet = document.querySelectorAll('.color1')
-const colorPanel = document.querySelector('.color-panel')
 colorPanel.style.display = 'none'
 colorPalet.forEach((e) =>{
     e.style.display = 'none'    
@@ -568,7 +607,6 @@ const DpNone = function() {
     snowControl.style.display = 'none'
     toolsClosebtn.style.display = 'none'
 }
-const toolsClosebtn = document.querySelector('.Close-tools')
 ToolsBtn.addEventListener('click',() =>{
     console.log('Tools-opened');
     colorPalet.forEach((e) =>{
@@ -597,3 +635,11 @@ colorPalet.forEach((e) =>{
     })
     e.style['background-color'] = e.innerHTML
 })
+
+} catch (error) {
+  console.log(error);
+  loading.style.display = 'block'
+     
+}
+
+}, 600);

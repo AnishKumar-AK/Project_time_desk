@@ -244,15 +244,15 @@ body{
 .Input-box-div{
     outline: none;
     color: black;
-    width: 60rem;
+    width: 55rem;
     height: 5rem;
     /* opacity: 20%; */
     /* font-family: "Montserrat", sans-serif; */
     /* font-weight: 800; */
     /* overflow-wrap: break-word; */
     /* font-size: 25px; */
-    margin: 2rem 0 0 2rem;
-    border-radius: 25px;
+    margin: 2rem 0 0 4rem;
+    /* border-radius: 8px; */
     border-width: 0;
     border-top:2px #201e1e;
     border-style: solid;
@@ -275,7 +275,7 @@ input{
     font-weight: 500;
     overflow-wrap: break-word;
     font-size: 18px;
-    margin: 1rem 0 0 2rem;
+    margin: 1rem 0 0 1rem;
     border-radius: 0px;
     border-width: 0;
     border-style: solid;
@@ -339,15 +339,15 @@ input{
 }
 .time-heading{
     position: absolute;
-    margin: 1rem 0 0 1rem;
-    background-color: red;
+    margin: 7rem 0 0 17rem;
+    /* background-color: red; */
     opacity: 70%;
     padding: 2px 0 5px 20px;
-    width: 5rem;
+    width: 15rem;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 14px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .stop-w-heading{
     /* z-index: -2; */
@@ -370,7 +370,7 @@ input{
     cursor: pointer;
     position: absolute;
     margin: 23rem 0 0 28%;
-    opacity: 70%;
+    /* opacity: 70%; */
     color: black;
     padding: 2px 0 5px 20px;
     width: 5rem;
@@ -378,16 +378,16 @@ input{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 2px;
-    background-color: rgb(104, 74, 238);
+    background-color: rgb(47, 47, 48);
 
 }
 .stop-w-stop{
-    background-color: rgb(238, 107, 107);
+    background-color: rgb(47, 47, 48);
     user-select: none;
     cursor: pointer;
     position: absolute;
     margin: 23rem 0 0 43%;
-    opacity: 70%;
+    /* opacity: 70%; */
     color: black;
     padding: 2px 0 5px 23px;
     width: 4.8rem;
@@ -402,8 +402,8 @@ input{
     color: black;
     position: absolute;
     margin: 23rem 0 0 58%;
-    background-color: rgb(82, 238, 90);
-    opacity: 70%;
+    background-color: rgb(47, 47, 48);
+    /* opacity: 70%; */
     padding: 2px 0 5px 20px;
     width: 5rem;
     border-radius: 5px;
@@ -411,18 +411,23 @@ input{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 2px;
 }
+.stop-w-start:hover,.stop-w-reset:hover,.stop-w-stop:hover{
+    transition: .2s;
+    color: white;
+}
 .time-zoom{
     cursor: pointer;
     position: absolute;
-    margin: 1rem 0 0 35.5rem;
-    background-color: rgb(151, 148, 148);
+    color: black;
+    margin: 0rem 0 0 33rem;
+    background-color: rgb(99, 255, 107);
     opacity: 80%;
     padding: 2px 0 5px 20px;
-    width: 4.5rem;
-    border-radius: 5px;
+    width: 8rem;
+    border-radius: 20px;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
 }
 .horizontal1{
     width: 70%;
@@ -443,6 +448,33 @@ input{
     /* transform: scaleY(1.5); */
     /* font-stretch: ; */
 }
+.empty-time{
+    opacity: 0%;
+}
+.startM{
+ position: absolute;
+    margin: 23rem 0 0 24rem;
+}
+.stopM{
+    margin: 23rem 0 0 31.5rem;
+    position: absolute;
+}
+.resetM{
+    margin: 23rem 0 0 39rem;
+ position: absolute;
+}
+.stop-w-second{
+    user-select: none;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 170px;
+    height: 10rem;
+    width: 30rem;
+    opacity: 70%;
+    margin: 11rem 0 0 17%;
+    letter-spacing: 2px;
+    transition: 1s;
+}
 .minutes-heading{
     position: absolute;
     opacity: 70%;
@@ -452,7 +484,56 @@ input{
     letter-spacing: 0px;
     transition: 1s;
 }
+.loading{
+    position: absolute;
+    margin: auto;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    text-align: center;
+    /* align-items: center; */
+    color: white;
+    padding: 14% 0 50% 0;
+    font-size: 200px;
+    background-color: rgb(3, 3, 19);
+}
 
+.load1{
+    /* animation-name: opacity; */
+    /* animation: infinite; */
+    /* animation-delay: 3s; */
+    opacity: 100%;
+    animation: opacity 1.02s infinite;
+    /* animation-direction: alternate; */
+}
+@keyframes opacity{
+    100%{
+        opacity: 1000%;
+    }
+    /* 100%{
+        opacity: 100%;
+    } */
+    50%{
+        opacity: 0%;
+    }
+
+}
+.load2{
+    animation: opacity 1s alternate-reverse infinite ;
+    /* animation-delay: s;  */
+    margin-left: -3rem;
+    /* animation-duration: 1.2s; */
+    
+}
+.load3{
+    animation: opacity 0.98s alternate-reverse infinite ;
+    margin-left: -3rem;
+
+    /* animation-delay: 1s;  */
+    /* animation-duration: 1.2s; */
+    
+}
 .study-mode{
     position: absolute;
     margin: auto;
@@ -493,6 +574,8 @@ input{
     /* margin: 40% auto 21.5% 10%; */
     /* position:fixed; */
     color: white;
+    opacity: 100%;
+    /* display: none; */
     font-size: 25rem;
     /* transition: 1s; */
     opacity: 90%;
@@ -633,7 +716,7 @@ input{
 }
 .day-month{
     margin: -3rem 0 0 25rem;
-    width: 20rem;
+    width: 30rem;
     opacity: 55%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
@@ -658,6 +741,61 @@ input{
     scale: 1.05;
 }
 
+.zoom-timer-btn{
+    background-color: rgb(53, 50, 50);
+    width: 6rem;
+    height: 1.6rem;
+    transition: .4s;
+    text-align: center;
+    position: absolute;
+    margin: -12rem 0 0 -20rem;
+    padding: 4px;
+    opacity: 40%;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    color: white;
+}
+.zoom-stop-w-btn{
+    background-color: rgb(53, 50, 50);
+    width: 8rem;
+    height: 1.6rem;
+    opacity: 40%;
+    transition: 1.4s;
+    text-align: center;
+    position: absolute;
+    margin: -12rem 0 0 -4rem;
+    padding: 4px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    color: white;
+}
+.zoom-pomo-btn{
+    cursor: pointer;
+    background-color: rgb(53, 50, 50);
+    width: 8rem;
+    opacity: 40%;
+    height: 1.6rem;
+    transition: .8s;
+
+
+    text-align: center;
+    position: absolute;
+    margin: -12rem 0 0 -13rem;
+    padding: 4px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    color: white;
+}
+.zoom-pomo-btn:hover, .zoom-stop-w-btn:hover, .zoom-timer-btn:hover{
+    color: white;
+    scale: 1.05;
+    transition: .1s;
+    background-color: #080880;
+    opacity: 100%;
+}
 
 
 

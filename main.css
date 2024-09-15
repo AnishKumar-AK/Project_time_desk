@@ -88,9 +88,9 @@
 }
 
 .get-started {
-  background: #5E5DF0;
+  background: #282841;
   border-radius: 6px;
-  box-shadow: #5d7ff0 0 10px 20px -10px;
+  /* box-shadow: #5d7ff0 0 10px 20px -10px; */
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
@@ -123,9 +123,9 @@
     /* opacity: 80%; */
     display: flex;
     align-self: flex-end;
-  box-shadow: #f0735d 0 10px 20px -10px;
+  /* box-shadow: #f0735d 0 10px 20px -10px; */
 
-    background-color: red;
+    background-color: rgb(75, 41, 41);
     scale: 1.1;
     position: absolute;
     margin:4rem 0 0 11.7rem;
