@@ -21,10 +21,14 @@ const taskPanel1 = document.querySelector('.panel1')
 const loading = document.querySelector('.loading')
 const zoomTimer = document.querySelector('.zoom-timer-btn')
 const zoomStopW = document.querySelector('.zoom-stop-w-btn')
-const zoomPomo = document.querySelector('.zoom-pomo-btn')
+const zoomAlarm = document.querySelector('.zoom-Alarm-btn')
+const zoomClock = document.querySelector('.zoom-clock-btn')
 const toolsClosebtn = document.querySelector('.Close-tools')
 const colorPalet = document.querySelectorAll('.color1')
 const colorPanel = document.querySelector('.color-panel')
+const dayMonthDate = document.querySelector('.day-month')
+const TimeEmptyContainer = document.querySelector('.empty-time')
+
 
 loading.style.display = 'block'
 
@@ -32,10 +36,6 @@ setTimeout(() => {
 try {
 loading.style.display = 'none'
 
-// const snow = document.querySelector('.snow')
-// const mainTag = document.querySelector('.Main')
-// const addTask = document.querySelector('.addTask')
-// const TodayTImeNav = document.querySelector('#time')
 let date = new Date()
 const month = [`January`,`February`,`March`,`April`,`May`,`June`,`July`,`August`,`September`,`October`,`November`,`December`]
 const weekDays = [`Sunday`,`Monday`,`Tuesday`,`Wednesday`,`Thursday`,`Friday`,`Saturdey`]
@@ -49,26 +49,24 @@ console.log(date.getDay());
 console.log(monthName);
 console.log(dayName);
 console.log(currentDate);
-document.querySelector('.day-month').innerHTML = `${dayName}, ${monthName} ${currentDate}`
+dayMonthDate.innerHTML = `${dayName}, ${monthName} ${currentDate}`
 let SecondsTimercounter = 0
 let MinutesTimercounter = 0
 let k = 0
 let holdCount = 0
-// let holdSecondsCount = 1
 let InputContainArray = []
 let final = []
-// Today.innerHTML =  `${dayName}, ${monthName}   ${currentDate} ${fullYear}` 
 let time = new Date()
 let currentTime = time.toLocaleTimeString();
-// Today.innerHTML =  `${currentTime}`
+let alarmHours = 0
+let alarmMins = 0
+
 
 const updateTime = function(){                          // function updates the time on screen
     let time = new Date()
-    // let currentTime = time.toLocaleTimeString();
     let hr = timehr[time.getHours()-1];
     let minutes = time.getMinutes()
     let seconds = time.getSeconds()
-    // Today.innerHTML = " "
     if(seconds < 10){
         seconds = seconds00[seconds]
     }
@@ -78,23 +76,27 @@ const updateTime = function(){                          // function updates the 
     Today.innerHTML =  `${hr}:${minutes}:${seconds}`
     zoomed.innerHTML =  `${hr}:${minutes}`
     ZoomSeconds.innerHTML = `${seconds}`
-    // TodayTImeNav.innerHTML = `${currentTime}`
-    // console.log(currentTime);
-    // console.log(Today);
     
 }
 console.log('timeUpdated');
 setInterval(updateTime,10);
+
+
+
 let allTasks = JSON.parse(localStorage.getItem('allTasks')) || {}
 allTasks.colorChanged = allTasks.colorChanged || ""
 allTasks.holdSecondsCount = allTasks.holdSecondsCount || 0
 allTasks.valueofn = allTasks.valueofn ? allTasks.valueofn : 1
 allTasks.DarkLight = allTasks.DarkLight || 0
+allTasks.alarmHrs = allTasks.alarmHrs || 0
+allTasks.alarmMin = allTasks.alarmMin || 0
+alarmHours = +allTasks.alarmHrs
+alarmMins = +allTasks.alarmMin
 localStorage.setItem('allTasks',JSON.stringify(allTasks))
+
 studyMode.style['background-color'] = allTasks.colorChanged
+
 ShowSeconds.addEventListener('click',() =>{
-    // colorPanel.style.display = 'none'
-    // toolsClosebtn.style.display = 'none'
     DpNone()
     if(ShowSeconds.innerHTML == 'Show Seconds'){
         allTasks.holdSecondsCount = 1
@@ -113,7 +115,6 @@ ShowSeconds.addEventListener('click',() =>{
 
         ShowSeconds.innerHTML = 'Show Seconds'
     }
-    // secondsOnOff()
     ShowSeconds.style.display = 'none'
 })
 const secondsOnOff = () =>{
@@ -140,9 +141,6 @@ const secondsOnOff = () =>{
 secondsOnOff()
 
 
-
-
-
 const LightModeSet =  function(){
     const divsDark = document.querySelectorAll('.Input-box-div')
 const body = document.querySelector('body')
@@ -166,7 +164,6 @@ const darkModeSet =  function(){
 const body = document.querySelector('body')
 
     LightMode.style.display = 'block'
-    // document.getElementsByName('placeholder').style.color = 'red'
     taskPanel1.classList.add('panel1Dark')
     const inputDark = document.querySelectorAll('.input-css')
     inputDark.forEach(e =>{
@@ -202,100 +199,16 @@ LightMode.addEventListener('click',() =>{
 
 
 
-// n = allTasks[`valueOfN${n}`] || 1
-// n = allTasks.valueofn
-// if(allTasks.valueofn == 1 || 2 || 3 || 4 || 5){
-//     n = allTasks.valueofn
-// }   
-// else{
-//     allTasks.valueofn = 0
-//     n = 1
-// }
-// n = allTasks.valueofn
-// final.append(divReturn)
-// console.log(allTasks.div1);
-// for (let i = 1; i < allTasks.valueofn; i++) {
-//     allInputBoxes.innerHTML += allTasks[`div${i}`]
-// }
-// if(allTasks[`div${allTasks.valueofn}`] == ""){
-//     allInputBoxes.innerHTML = ''
-// }
-// else{
-//     allInputBoxes.innerHTML += allTasks[`div${allTasks.valueofn}`]
-// }
-// setInterval(() => {
-//     if (allTasks.valueofn == 2) {
-//         let input11 = document.querySelector('#input1')
-//             // console.log(byby.value);
-//             input11.value = allTasks.input1
-//         } 
-//     if (allTasks.valueofn == 3) {
-//         let input22 = document.querySelector('#input2')
-//             // console.log(byby.value);
-//             input22.value = allTasks.input2
-//         } 
-//     if (allTasks.valueofn == 4) {
-//         let input33 = document.querySelector('#input3')
-//             // console.log(byby.value);
-//             input33.value = allTasks.input3
-//         } 
-// }, 10);
-// const inputOne = document.querySelector('#input1') ? document.querySelector('#input1') : ''
-// inputOne.value = allTasks.input1
 const repeat = () => {
     for (let i = 2; i <= allTasks.valueofn; i++) {
         allInputBoxes.innerHTML +=  allTasks[`div${i}`] 
         let inputK = document.querySelector(`#input${i-1}`)                 
-        // inputK.addEventListener
             inputK.addEventListener('input',() => {
                 console.log(inputK.value);
                 allTasks[`div${i}`] = `<div id=\"input-box-div${i-1}\" class=\"Input-box-div\"><input class=\"input-css\" id=\"input${i-1}\" placeholder=\"${inputK.value}"></div>`
                 localStorage.setItem('allTasks',JSON.stringify(allTasks))
-                // console.log(input1.value)
-                // console.log(input1);
-            //     allTasks[`input${allTasks.valueofn-1}`] = inputOne.value
-            // allTasks[`div${allTasks.valueofn}`] = `<div id=\"input-box-div${allTasks.valueofn-1}\" class=\"Input-box-div\"><input class=\"input-css\" id=\"input${allTasks.valueofn-1}\" placeholder=\"${input1.value}">${input1.value}</div>`
     })
-        // console.log(inputK);
-        
-        
-        // for(let k = 2;k<= allTasks.valueofn;k++){
-        // }
-    // let hello = allTasks[`div${allTasks.valueofn}`]
-    // console.log(hello);
-        
-        // let inputOne = document.querySelector(`#input${allTasks.valueofn-1}`)
-        // console.log(inputOne);
-            // inputOne.innerHTML = allTasks[`input${allTasks.valueofn}`]
-        //     console.log(inputOne);
-
-        // if(allTasks.valueofn==2){
-                                // })
-            // const inputOne0 = document.querySelector('#input2')
-            // console.log(inputOne0.value + 'hi');
-        // }
-        // else if(allTasks.valueofn == 3){
-        //     k = 3
-        //     if(k==3){
-        //     }
-        // }
-        // else if(allTasks.valueofn==3){
-        //     // const inputOne2 = document.querySelector('#input1')
-        //     const inputtwo = document.querySelector('#input2')
-        //     // inputOne2.value = allTasks.input1
-        //     inputtwo.value = allTasks.input2
-        // }
-        // allTasks.div2.childNodesś = allTasks.input1.value
-        // if(allTasks.div2 = "ś
-        // console.log(input1.id);
-
-        // input1.addEventListener('input',() => {
-            // console.log(input1.value)
-            // console.log(input1);
-            // allTasks[`input${allTasks.valueofn-1}`] = input1.value 
-    // localStorage.setItem('allTasks',JSON.stringify(allTasks))
-    }   
-    
+}   
     console.log('task refreshed');
     console.log('tasks loaded successfully');
     if(allTasks.DarkLight == 0){
@@ -309,17 +222,15 @@ const repeat = () => {
         })
     }
     else return
-
-    // while(i<6){
-    //     allInputBoxes.innerHTML +=  allTasks[`div${allTasks.valueofn}`]
-    //     i++ 
-    // }
 }
 repeat();
-// console.log(allTasks.inputDiv1);
 startTimer.forEach((e) =>{
-e.addEventListener('click', () =>{
-    // let counter = 0;
+    e.addEventListener('click', () =>{
+        TimerRender.style.color = 'red'
+    setTimeout(() => {
+        TimerRender.style.color = 'white'
+        
+    }, 1000);
     setTimeout(() => {
         document.querySelector('.stop-w-heading').style.opacity="0%"
     }, 200);
@@ -336,7 +247,6 @@ e.addEventListener('click', () =>{
         console.log(SecondsTimercounter);
         console.log('timer stopped');
         
-        // SecondsTimercounter = 0
     })
 })
     resetTimer.forEach((e) =>{
@@ -349,10 +259,10 @@ e.addEventListener('click', () =>{
         MinutesTimercounter = 0
         TimerRender.innerHTML = '00:00'
         secondStopW.innerHTML = '00:00'
+        })
+       })
+      });
     })
-})
-});
-})
 const startOne = () => {
     if (MinutesTimercounter == 0 || MinutesTimercounter == '00') {
         MinutesTimercounter = seconds00[+MinutesTimercounter]
@@ -365,19 +275,19 @@ const startOne = () => {
         console.log(SecondsTimercounter , MinutesTimercounter);
         if(SecondsTimercounter < 10){
             SecondsTimercounter = seconds00[SecondsTimercounter]
-            // TimerRender.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
         }
         TimerRender.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
         secondStopW.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
-        // console.log(MinutesTimercounter);
         if ( SecondsTimercounter > 59) {
-            SecondsTimercounter = 0;
             MinutesTimercounter++;
+            SecondsTimercounter = 0;
+            SecondsTimercounter = seconds00[SecondsTimercounter]
             if(MinutesTimercounter < 10){
-                // TimerRender.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
                 MinutesTimercounter = seconds00[MinutesTimercounter]
             }
         }
+        TimerRender.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
+        secondStopW.innerHTML = `${MinutesTimercounter}:${SecondsTimercounter}`
         if(MinutesTimercounter > 59){
             console.log('minutes shifted successfully');
             TimerRender.style.margin = '11rem 0 0 35%';
@@ -413,7 +323,6 @@ TimeZoomBtn.addEventListener('click', () =>{
         loading.style.display = 'none'
         studyMode.style.display = 'block'
     }, 900);
-    // allTasks.colorChanged = 
 })
 ZoomCloseBtn.addEventListener('click', () =>{
     console.log('study mode inactive');
@@ -424,122 +333,33 @@ ZoomCloseBtn.addEventListener('click', () =>{
     }, 800);
 })
 let closebtnHold = 0
-window.addEventListener('mousemove', () =>{                 // window event to control zoom screen flow
-    if(closebtnHold == 0){
-            closebtnHold = 1   
-            btnopacity()
-        }
-        // document.querySelector('body').style.cursor = ''
-        // setTimeout(() => {
-        //     document.querySelector('body').style.cursor = 'none'
-        // }, 3500);
-})
+
 if(allTasks.valueofn>5){
     addTaskBtn.style.display = 'none'
     removetaskBtn.style.margin = '4rem 0 0 4rem'
 }
-const btnopacity = function (){            // function to control close button opacity
-    ZoomCloseBtn.style.opacity= '50%'
-    zoomTimer.style.opacity= '50%'
-    zoomStopW.style.opacity= '50%'
-    zoomPomo.style.opacity= '50%'
-    
-    setTimeout(() => {
-        zoomTimer.style.opacity= '0%'
-        zoomStopW.style.opacity= '0%'
-        zoomPomo.style.opacity= '0%'
-        ZoomCloseBtn.style.opacity= '0%'
-        closebtnHold=0
-    },3500);
-}
 let arrayToremove = []
-// inputBoxSelector.forEach((e) => {
-//     inputBoxSelector.addEventListener('click', () =>{
-//         console.log('hellodsaodo');
-//     })
-// });
 addTaskBtn.addEventListener('click',() =>{                  // button to add tasks. blue  #
     
     let divReturn =  addInputBox();
     let input1 = document.querySelector(`#input${allTasks.valueofn-1}`)
-    // k++
-    // allTasks[`div${allTasks.valueofn}`] = divReturn.outerHTML
     allTasks[`div${allTasks.valueofn}`] = `<div id=\"input-box-div${allTasks.valueofn-1}\" class=\"Input-box-div\"><input class=\"input-css\" id=\"input${allTasks.valueofn-1}\" placeholder=\"${input1.value}"></div>`
     localStorage.setItem('allTasks',JSON.stringify(allTasks))
-    // console.log(divReturn.childNodes);
-    // final = [...divReturn.childNodes]
-    // console.log(final[0].id.innerText = ' hello');
-    // final[0].innerText = 'hello'
-    // console.log(divReturn[0]);
-    // console.log(final[0]);
     InputContainArray[allTasks.valueofn-2] = divReturn.childNodes
     console.log(...InputContainArray[allTasks.valueofn-2]);
-    // input1.value = allTasks[`input${allTasks.valueofn-1}`]
-    // console.log(document.querySelector(`${InputContainArray[0]}`)); 
-    // InputContainArray.forEach((e) => {
-    //         e.addEventListener('focusout', () => {
-    //             console.log(`this works hello yeah ${e}`);
-    //         })
-    // });
-    // if (allTasks.valueofn == 2) {
-        // console.log(input1.id);
-        input1.addEventListener('input',() => {
-            // console.log(`input updated`);
-            
+    input1.addEventListener('input',() => {
             allTasks[`div${allTasks.valueofn}`] = `<div id=\"input-box-div${allTasks.valueofn-1}\" class=\"Input-box-div\"><input class=\"input-css\" id=\"input${allTasks.valueofn-1}\" placeholder=\"${input1.value}"></div>`
-            // console.log(input1.value)
-            // console.log(input1);
-            // console.log(input1.parentNode.outerHTML + input1.value);
             allTasks[`input${allTasks.valueofn-1}`] = input1.value
     localStorage.setItem('allTasks',JSON.stringify(allTasks))
-
-            // input.innerText = input.value
         })
-    // }
-    // console.log(inputContainer.nextElementSibling.id);
-    // console.log(divReturn);
-    // console.log(allInputBoxes);
-    // allInputBoxes.childNodes.forEach((e) => {
-    //     InputContainArray[n] = e?
-    //     console.log(...InputContainArray[n].childNodes);
-    // })
-    // final = [...InputContainArray[n].childNodes]
-    // console.log(final[0].id);
-    // final.forEach((e) => {
-    //     e.id.innerText = 'hello'
-    //     e.addEventListener('focusout',()=>{
-    //         allTasks[`input${n-1}-value`] = e[0].id.value
-    //         localStorage.setItem('allTasks',JSON.stringify(allTasks))
-    //     })  
-    // });
-    // console.log(allTasks);
-    // allTasks[`inputDiv${n-1}`] = divReturn.outerHTML
-    // allTasks[`input${n-1}`] = final[0].id
-    // localStorage.setItem('allTasks',JSON.stringify(allTasks))
-    // arrayToremove[n-2] = inputIdtoRemove.id
-    // newArray = [...arrayToremove]
-    // console.log(newArray);
     if(allTasks.valueofn>5){
         addTaskBtn.style.display = 'none'
         removetaskBtn.style.margin = '4rem 0 0 4rem'
     } 
     console.log(`new task added Successfully`);
-
-    // console.log(arrayToremove);
-    // console.log(inputIdtoRemove.id + 'athis is ti');
-    // inputContainer.append(inputBox)
 })
-// const repeat2 = () =>{
-//     for(let b= 1; b<= 5; b++){
-//         let inputk = document.querySelector('#input' + `${b}`)
-//         inputk.value = allTasks[`input${b}`]
-//         console.log(inputk.value);
-//     }
-// }
 removetaskBtn.addEventListener('click',()=>{                                // button to remove tasks red  #
-    // conso[le.log((document.querySelector(`#input-box-div${n-1}`)).id);
         inputContainer.removeChild((document.querySelector(`#input-box-div${allTasks.valueofn-1}`)))    
-    // localStorage.removeItem(allTasks[`inputDiv${1}`])
     k--
     JSON.parse(localStorage.getItem('allTasks'))
     allTasks[`div${allTasks.valueofn}`] = ''
@@ -548,8 +368,6 @@ removetaskBtn.addEventListener('click',()=>{                                // b
         localStorage.setItem('allTasks',JSON.stringify(allTasks))
         allInputBoxes.innerHTML = ''
         repeat();
-        // repeat2();
-    // localStorage.setItem('allTasks',JSON.stringify(allTasks))
     if(allTasks.valueofn<6){
         removetaskBtn.style.margin = '4rem 0 0 11.7rem'
         addTaskBtn.style.display = 'block'
@@ -566,10 +384,8 @@ const addInputBox = () =>{                  // function to create inout div #
         inputDiv.classList.add('Input-box-div')
         inputContainer.append(inputDiv)
         inputDiv.appendChild(inputBox)
-        // console.log(inputDiv.id);
         allTasks.valueofn++
         localStorage.setItem('allTasks',JSON.stringify(allTasks))
-        // console.log(n);
         console.log('New Input Div Created');
         if(allTasks.DarkLight == 0){
             inputBox.style.color = 'white'
@@ -580,23 +396,6 @@ const addInputBox = () =>{                  // function to create inout div #
         return inputDiv
     }
 }
-// const inputBoxSelector = document.querySelectorAll(`#input${allTasks.valueofn}`)
-// let input2 = document.querySelector('#input2')
-// let input3 = document.querySelector('#input3')
-// let input4 = document.querySelector('#input4')
-// let input5 = document.querySelector('#input5')
-// let input = [input1,input2]
-// for (let i = 1; i < 3; i++){
-//     // let input = ['#input1']
-//     input[i].addEventListener('focusout',() => {
-//         console.log('helo');
-//     })
-// }
-// oxSelector.forEach(e =>{
-//     e.addEventListener('click',() =>{
-//         console.log('jasljdl');
-//     })
-// })
 colorPanel.style.display = 'none'
 colorPalet.forEach((e) =>{
     e.style.display = 'none'    
@@ -621,10 +420,8 @@ ToolsBtn.addEventListener('click',() =>{
         
         DpNone()
     })
-    // ToolsBtn.style.opacity ='0'
 })
 colorPalet.forEach((e) =>{
-    // console.log(e.innerHTML);
     e.addEventListener('click',() =>{
         console.log(`Background Changed successfully to ${e.innerHTML}`);
         
@@ -635,11 +432,360 @@ colorPalet.forEach((e) =>{
     })
     e.style['background-color'] = e.innerHTML
 })
+const timerSetZoom = document.querySelector('.TimerSet0')
+const timerSet = document.querySelector('.TimerSet')
+const timerSetEmptyContainer = document.querySelector('.timerSet-empty')
+const alarmContainer = document.querySelector('.alarmContainer')
+
+const zoomOpacityAllBtn = function(){
+    zoomed.style.opacity = '0'
+    dayMonthDate.style.opacity = '0'
+    ZoomSeconds.style.opacity = '0'
+    TimeEmptyContainer.style.opacity = '0'
+    timerSet.style.opacity = '0'
+    timerSetEmptyContainer.style.opacity = '0'
+    timerSetEmptyContainer.style.opacity = '0'
+    alarmContainer.style.opacity = '0'   
+}
+zoomTimer.addEventListener('click', ()=>{
+    zoomOpacityAllBtn()
+    TimeEmptyContainer.style.opacity = '100'
+})
+zoomClock.addEventListener('click', ()=>{
+    zoomOpacityAllBtn()
+    zoomed.style.opacity = '100'
+    dayMonthDate.style.opacity = '100'
+    ZoomSeconds.style.opacity = '100'
+})
+timerSetZoom.addEventListener('click', ()=>{
+    zoomOpacityAllBtn()
+    timerSet.style.opacity = '100'
+    timerSetEmptyContainer.style.opacity = '100'
+})
+const SetalarmDiv = document.querySelector('.alarmNum') 
+
+const selectHr = document.querySelector('#hr')
+const selectMin = document.querySelector('#Min')
+const setAlarm = document.querySelector('.PostAlarm')
+const notiTime = document.querySelector('.notiTime')
+const ALarmOffBtn = document.querySelector('.turnOffAlarm')
+const alarmNotiPanel = document.querySelector('.AlarmNotification')
+
+for(i=1; i< 13; i++){
+    if(i == 12 ){
+        selectHr.innerHTML += `<option value=${i}>${i} PM</option>`
+    }
+    else selectHr.innerHTML += `<option value=${i}>${i} AM</option>`
+}
+for(i=13; i< 25; i++){
+    if(i == 24 ){
+        selectHr.innerHTML += `<option value=${i}>${i-12} AM</option>`
+    }
+    else{
+
+        selectHr.innerHTML += `<option value=${i}>${i-12} PM</option>`
+    }
+}
+for(i=0; i< 60; i++){
+    selectMin.innerHTML += `<option value=${i}>${i}</option>`
+}
+
+
+const oldAlarm = document.querySelector('.oldAlarm')
+if(alarmHours > 0){
+    selectHr.value = +alarmHours
+}
+selectMin.value = +alarmMins
+
+const alarmOldPreSet = function() {
+    if(alarmHours > 0 && alarmHours < 12 || alarmHours == 24){
+        if(alarmMins < 10){
+            oldAlarm.innerHTML = `${timehr[alarmHours-1]}:${seconds00[alarmMins]} AM`
+            notiTime.innerHTML = `${timehr[alarmHours-1]}:${seconds00[alarmMins]} `
+        }
+        else {
+
+            oldAlarm.innerHTML = `${timehr[alarmHours-1]}:${alarmMins} AM`
+            notiTime.innerHTML = `${timehr[alarmHours-1]}:${alarmMins} `
+        }
+    }
+    
+    else if(alarmHours == 0){
+        oldAlarm.innerHTML = `00:00 AM`
+        notiTime.innerHTML = `00:00 `
+        }
+    else {
+        if(alarmMins < 10){
+    
+            oldAlarm.innerHTML = `${timehr[alarmHours-1]}:${seconds00[alarmMins]} PM`
+            notiTime.innerHTML = `${timehr[alarmHours-1]}:${seconds00[alarmMins]}`
+        }
+        else {
+
+            oldAlarm.innerHTML = `${timehr[alarmHours-1]}:${alarmMins} PM`
+            notiTime.innerHTML = `${timehr[alarmHours-1]}:${alarmMins}`
+        }
+    }  
+}
+alarmOldPreSet()
+
+
+let holdAlarm = 0
+
+setAlarm.addEventListener('click',()=>{
+    console.log(selectHr.value);
+    alarmHours = selectHr.value
+    alarmMins = selectMin.value
+    allTasks.alarmHrs = +alarmHours
+    allTasks.alarmMin = +alarmMins
+    localStorage.setItem('allTasks',JSON.stringify(allTasks))
+    SetalarmDiv.style.display = 'none'
+    changeAlarm.style.display = 'block'
+    alarmOldPreSet()
+    holdAlarm = 0
+    return alarmHours,alarmMins 
+})
+zoomAlarm.addEventListener('click',()=>{
+    zoomOpacityAllBtn()
+    if(oldAlarm.innerHTML == '00:00 AM')
+    {
+        changeAlarm.style.display = 'none'
+        SetalarmDiv.style.display = 'block'
+    }
+    else{
+
+        SetalarmDiv.style.display = 'none'
+        changeAlarm.style.display = 'block'
+    } 
+
+    alarmContainer.style.opacity = '60%'   
+
+})
+
+const changeAlarm = document.querySelector('.ChangeAlarm')
+changeAlarm.addEventListener('click', ()=> {
+    SetalarmDiv.style.display = 'block'
+
+})
+ALarmOffBtn.addEventListener('click', ()=>{
+    holdAlarm = 2
+    if(holdAlarm == 2){
+        alarmNotiPanel.style.opacity = 0
+    }
+})
+const alarmTime = function(){                          // function updates the time on screen
+    let time = new Date()
+    let hr = time.getHours();
+    let minutes = time.getMinutes()
+    if(+alarmHours == hr && +alarmMins == minutes){
+        if(holdAlarm == 0){
+            console.log('alarm off');
+            alarmNotiPanel.style.opacity = 100
+            console.log(holdAlarm);
+            alarmNotiPanel.style.display = 'block'
+        }
+    } 
+    else {
+        holdAlarm = 0
+        alarmNotiPanel.style.opacity = 0
+        setTimeout(() => {
+            alarmNotiPanel.style.display = 'none'
+        }, 1000); 
+    }      
+}
+setInterval(alarmTime,1000)
+console.log(alarmHours);
+// console.log(selectHr.value);
+
+// selectHr.addEventListener('click',()=>{
+//     console.log(selectHr.value);
+// })
+// let timeAm = 1
+// const alarmContainer = document.querySelector('.alarmContainer')
+// const createSelect = ()=>{
+//     // selectHr.setAttribute('id', 'hr')
+//         let selectHrDiv = document.createElement('div')
+//         selectHrDiv.setAttribute('class','alarmSelectDiv')
+//         // let HrPlusH = document.createElement('hr')
+//         // HrPlusH.setAttribute('class','PlusH')
+//         // let HrPlusV = document.createElement('hr')
+//         // HrPlusV.setAttribute('class','PlusV')
+//         // selectHrDiv.appendChild(HrPlusH)
+//         // selectHrDiv.appendChild(HrPlusV)
+//         /* display: flex; */
+//         alarmContainer.prepend(selectHrDiv)
+        
+//         // let selectHrOption = document.createElement('option')
+//         // selectHrOption.setAttribute('vaalue',`${i}`)
+//         // selectHrOption.innerText = `${i+1} AM`
+//     // let inputDiv = document.createElement('div')
+//     // inputDiv.setAttribute('id',`input-box-div${allTasks.valueofn}`)
+//     // inputBox.classList.add('input-css')
+//     // inputBox.setAttribute('id',`input${allTasks.valueofn}`)
+//     // inputBox.placeholder = 'Enter Your Task Here...'
+//     // inputDiv.classList.add('Input-box-div')
+//     // inputContainer.append(inputDiv)
+//     // inputDiv.appendChild(inputBox)
+// }
+// // createSelect()
+// const alarmSetDiv = document.querySelector('.alarmSelectDiv')
+// alarmSetDiv.addEventListener('click',(e)=>{
+//     if(alarmContainer.childElementCount < 5){
+//         alarmSetDiv.style.display = 'block'
+//         createSelect()
+//     }
+//     else{
+//         createSelect()
+//         alarmSetDiv.style.display = 'none'
+//     }
+
+// })
+
+
+
+
+
+// <!-- <div class="alarmSelectDiv">
+//                                 <hr class="PlusH">
+//                                 <hr class="PlusV">
+//                             </div> -->
+
+
+//                             <!-- <div class="alarmSelectDiv"></div>
+//                             <div class="alarmSelectDiv"></div>
+//                             <div class="alarmSelectDiv"></div>
+//                             <div class="alarmSelectDiv"></div>
+//                             <div class="alarmSelectDiv"></div>
+//                             <div class="alarmSelectDiv"></div>
+//                             <div class="alarmSelectDiv"></div> -->
+//                             <!-- hellosdasdsadasdasd -->
+//                            
+
+
+
+
+
+
+
+let timerMin = 0
+let timerSec = 60
+
+const timer5m = document.querySelector('.timer5min')
+const timer10m = document.querySelector('.timer10min')
+const timer30m = document.querySelector('.timer30min')
+const timer60m = document.querySelector('.timer60min')
+
+let timerholdcounter = 0
+timer5m.addEventListener('click',()=>{
+        if(timerholdcounter == 0){
+            timerholdcounter = 1
+            timerDrop(4)
+        }    
+})
+timer10m.addEventListener('click',()=>{
+        if(timerholdcounter == 0){
+            timerholdcounter = 1
+            timerDrop(9)
+        }    
+})
+timer30m.addEventListener('click',()=>{
+        if(timerholdcounter == 0){
+            timerholdcounter = 1
+            timerDrop(29)
+        }    
+})
+timer60m.addEventListener('click',()=>{
+        if(timerholdcounter == 0){
+            timerholdcounter = 1
+            timerDrop(59)
+        }    
+})
+
+const timerDrop = function(a){
+    timerMin += a
+    // timerSec--
+    if(timerMin<10){
+        timerSet.innerHTML = `0${timerMin}:${timerSec}`
+    }
+    else{
+        timerSet.innerHTML = `${timerMin}:${timerSec}`
+
+    }
+    setInterval(() => {
+        if(timerMin != -1 && timerSec != 0){
+            timerSec--
+            if(timerMin<10){
+                timerMin = seconds00[+timerMin]
+            }
+            if(timerSec<10){
+                timerSec = seconds00[+timerSec]
+            }
+            timerSet.innerHTML = `${timerMin}:${timerSec}`
+            if(timerSec=='00'){
+                timerSec = 59
+                timerMin = +timerMin
+                timerMin--
+            }  
+        }
+        else{
+        timerSet.innerHTML = `00:00`
+            timerholdcounter = 0
+        }
+        // if (timerMin == '00' && timerSec == '00') {
+        // timerSet.innerHTML = `${timerMin}:${timerSec}`
+            
+        // }
+        console.log(a);   
+        console.log(timerMin, timerSec);
+    }, 1000);
+
+}
+
+
+
+
+
+
+
+window.addEventListener('mousemove', () =>{                 // window event to control zoom screen flow
+    if(closebtnHold == 0){
+            closebtnHold = 1   
+            btnopacity()
+        }
+})
+
+const btnopacity = function (){            // function to control all zoom buttons opacity on mouse move
+    ZoomCloseBtn.style.opacity= '50%'
+    zoomTimer.style.opacity= '50%'
+    zoomStopW.style.opacity= '50%'
+    zoomAlarm.style.opacity= '50%'
+    zoomClock.style.opacity= '50%'
+    timer5m.style.opacity = '100%'
+    timer10m.style.opacity = '100%'
+    timer30m.style.opacity = '100%'
+    timer60m.style.opacity = '100%'
+    setTimeout(() => {
+        timer5m.style.opacity = '0%'
+        timer10m.style.opacity = '0%'
+        timer30m.style.opacity = '0%'
+        timer60m.style.opacity = '0%'
+        zoomTimer.style.opacity= '0%'
+        zoomStopW.style.opacity= '0%'
+        zoomAlarm.style.opacity= '0%'
+        zoomClock.style.opacity= '0%'
+        ZoomCloseBtn.style.opacity= '0%'
+        closebtnHold=0
+    },3500);
+}
+
+
+
+
+
 
 } catch (error) {
   console.log(error);
   loading.style.display = 'block'
      
 }
-
 }, 600);
