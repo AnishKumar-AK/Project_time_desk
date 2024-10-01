@@ -880,22 +880,15 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 10rem;
     width: 30rem;
     margin-left: 38%;
-    margin-top: -11rem;
+    margin-top: 2rem;
+    opacity: 1;
     border-radius: 2.65rem;
     background-color: rgb(62, 110, 104);
     position: absolute;
-    /* animation: AlarmPaneldrop 1.5s; */
     color: white;
-    transition: 1s;
+    transition: 1.4s;
 }
-/* @keyframes AlarmPaneldrop {
-    from{
-        margin-top: -8rem;
-    }
-    to{
-        margin-top: 2rem;
-    }
-} */
+
 .AlarmNotification img{
     margin-left: -4rem;
     height: 9rem;

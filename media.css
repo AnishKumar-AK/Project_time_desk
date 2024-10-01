@@ -307,4 +307,12 @@ width: 5rem;
     width: 6rem;
     margin: 11rem 0 0 12rem;
 }
+.AlarmNotification{
+    display: none;
+    /* display: ; */
+    rotate: 90deg;
+    margin-left: -3rem;
+    scale: 0.6;
+    margin-top: 20rem;
+}
 }
