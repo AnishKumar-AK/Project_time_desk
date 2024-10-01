@@ -10,6 +10,7 @@ const ZoomCloseBtn = document.querySelector('.closebtn')
 const addTaskBtn = document.querySelector('.add-task')
 const removetaskBtn = document.querySelector('.remove-task')
 const inputContainer = document.querySelector('.task-input-container')
+const TaskPanels = document.querySelector('.task-panels')
 const allInputBoxes= document.querySelector('.task-input-container')
 const studyMode = document.querySelector('.study-mode')
 const ZoomSeconds = document.querySelector('.zoom-features-seconds')
@@ -30,7 +31,7 @@ const dayMonthDate = document.querySelector('.day-month')
 const TimeEmptyContainer = document.querySelector('.empty-time')
 
 
-loading.style.display = 'block'
+// loading.style.display = 'block'
 
 setTimeout(() => {
 try {
@@ -319,6 +320,8 @@ const startOne = () => {
 TimeZoomBtn.addEventListener('click', () =>{
     console.log('study mode active');
     loading.style.display = 'block'
+    TaskPanels.style.display = 'none'
+    // body.style.overflow = hidden
     setTimeout(() => {
         loading.style.display = 'none'
         studyMode.style.display = 'block'
@@ -327,6 +330,8 @@ TimeZoomBtn.addEventListener('click', () =>{
 ZoomCloseBtn.addEventListener('click', () =>{
     console.log('study mode inactive');
     loading.style.display = 'block'
+    TaskPanels.style.display = 'block'
+
     setTimeout(() => {
         loading.style.display = 'none'
         document.querySelector('.study-mode').style.display = 'none'
@@ -355,6 +360,7 @@ addTaskBtn.addEventListener('click',() =>{                  // button to add tas
     if(allTasks.valueofn>5){
         addTaskBtn.style.display = 'none'
         removetaskBtn.style.margin = '4rem 0 0 4rem'
+
     } 
     console.log(`new task added Successfully`);
 })
