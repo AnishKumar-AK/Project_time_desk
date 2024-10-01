@@ -2,16 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="shortcut icon" href="1hourglass.png" type="image/x-icon">
+        <link rel="shortcut icon" href="images/1hourglass.png" type="image/x-icon">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Time Desk</title>
         <meta name="description" content="This is a task management project">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="app.css">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="media.css">
     </head>
     <body>
         <div class="Main">
+            <span id="audio"></span>
             <div class="task-main">
                 <div class="loading">
                     <span class="load1" style="color: rgb(15, 18, 206);">.</span>
@@ -56,6 +58,7 @@
                                  <select id="Min">
                                  <!-- <option value="1AM">01</option> -->
                                 </select>
+                                <div class="setbackground"></div>
                                 <button class="PostAlarm">Set Alarm</button>
                             </div>
                             

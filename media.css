@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    body{
+        color: red;
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+    .task-panels{
+        color: red;
+        font-size: 10rem;
+    }
+  }

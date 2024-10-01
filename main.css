@@ -87,6 +87,123 @@
     margin: 4rem 0 0 0rem;
 }
 
+.clockHand{
+    z-index: -1;
+    position: absolute;
+    margin: 11rem 0 0 8rem;
+    height: 14rem;
+    border-radius: 10%;
+    width: 1rem;
+    /* rotate: 90deg; */
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockBig{
+    z-index: -1;
+    position: absolute;
+    margin: 5rem 0 0 8rem;
+    height: 1rem;
+    border-radius: 100%;
+    width: 1rem;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockBigRight{
+    z-index: -1;
+    position: absolute;
+    margin: 10rem 0 0 24rem;
+    /* height: 4rem; */
+    rotate: 45deg;
+    
+    height: 1rem;
+    border-radius: 100%;
+    /* border-radius: 10%; */
+    width: 1rem;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockBigBottomRight{
+    z-index: -1;
+    position: absolute;
+    margin: 36rem 0 0 24rem;
+    /* height: 4rem; */
+    rotate: -45deg;
+    
+    height: 1rem;
+    border-radius: 100%;
+    /* border-radius: 10%; */
+    width: 1rem;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockBigLeft{
+    z-index: -1;
+    position: absolute;
+    margin: 10rem 0 0 -8rem;
+    /* height: 4rem; */
+    rotate: -45deg;
+    
+    height: 1rem;
+    border-radius: 100%;
+    /* border-radius: 10%; */
+    width: 1rem;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockBigBottomLeft{
+    z-index: -1;
+    position: absolute;
+    margin: 36rem 0 0 -8rem;
+    /* height: 4rem; */
+    rotate: -135deg;
+    
+    height: 1rem;
+    border-radius: 100%;
+    /* border-radius: 10%; */
+    width: 1rem;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockBig2{
+    z-index: -1;
+    position: absolute;
+    margin: 43rem 0 0 8rem;
+    /* height: 4rem; */
+    /* border-radius: 10%; */
+    width: 1rem;
+    
+    height: 1rem;
+    border-radius: 100%;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockLayer2{
+    z-index: -1;
+    position: absolute;
+    margin: 23.5rem 0 0 28rem;
+    /* height: 1rem; */
+    /* border-radius: 10%; */
+    width: 1rem;
+    
+    height: 1rem;
+    border-radius: 100%;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+.clockLayer3{
+    z-index: -1;
+    position: absolute;
+    margin: 23.5rem 0 0 -13rem;
+    /* height: 1rem; */
+    /* border-radius: 10%; */
+    width: 1rem;
+    
+    height: 1rem;
+    border-radius: 100%;
+    opacity: 20%;
+    background: rgb(255, 252, 252);
+}
+
 .get-started {
   background: #282841;
   border-radius: 6px;

@@ -473,21 +473,24 @@ const alarmNotiPanel = document.querySelector('.AlarmNotification')
 
 for(i=1; i< 13; i++){
     if(i == 12 ){
-        selectHr.innerHTML += `<option value=${i}>${i} PM</option>`
+        selectHr.innerHTML += `<option value=${i}>${i} Pm</option>`
     }
-    else selectHr.innerHTML += `<option value=${i}>${i} AM</option>`
+    else selectHr.innerHTML += `<option value=${i}>${i} Am</option>`
 }
 for(i=13; i< 25; i++){
     if(i == 24 ){
-        selectHr.innerHTML += `<option value=${i}>${i-12} AM</option>`
+        selectHr.innerHTML += `<option value=${i}>${i-12} Am</option>`
     }
     else{
 
-        selectHr.innerHTML += `<option value=${i}>${i-12} PM</option>`
+        selectHr.innerHTML += `<option value=${i}>${i-12} Pm</option>`
     }
 }
 for(i=0; i< 60; i++){
-    selectMin.innerHTML += `<option value=${i}>${i}</option>`
+    if(i<10){
+        selectMin.innerHTML += `<option value=${i}>${seconds00[i]}</option>`
+    }
+    else selectMin.innerHTML += `<option value=${i}>${i}</option>`
 }
 
 
@@ -556,9 +559,8 @@ zoomAlarm.addEventListener('click',()=>{
 
         SetalarmDiv.style.display = 'none'
         changeAlarm.style.display = 'block'
-    } 
-
-    alarmContainer.style.opacity = '60%'   
+    }
+    alarmContainer.style.opacity = '100%'   
 
 })
 
@@ -570,32 +572,33 @@ changeAlarm.addEventListener('click', ()=> {
 ALarmOffBtn.addEventListener('click', ()=>{
     holdAlarm = 2
     if(holdAlarm == 2){
-        alarmNotiPanel.style.opacity = 0
+        audioElement.pause()
+        alarmNotiPanel.style['margin-top'] = '-11rem'
     }
 })
-const alarmTime = function(){                          // function updates the time on screen
+
+const audioElement = new Audio("clockTick.mp3");
+
+const alarmTime = function(){                          // function checks alarm time
     let time = new Date()
     let hr = time.getHours();
     let minutes = time.getMinutes()
     if(+alarmHours == hr && +alarmMins == minutes){
         if(holdAlarm == 0){
-            console.log('alarm off');
-            alarmNotiPanel.style.opacity = 100
-            console.log(holdAlarm);
-            alarmNotiPanel.style.display = 'block'
+            audioElement.play()
+            console.log('alarm offf');
+            alarmNotiPanel.style['margin-top'] = '2rem'
         }
+        holdAlarm = 1
     } 
     else {
+        audioElement.pause()
+        alarmNotiPanel.style['margin-top'] = '-11rem'
         holdAlarm = 0
-        alarmNotiPanel.style.opacity = 0
-        setTimeout(() => {
-            alarmNotiPanel.style.display = 'none'
-        }, 1000); 
     }      
 }
+
 setInterval(alarmTime,1000)
-console.log(alarmHours);
-// console.log(selectHr.value);
 
 // selectHr.addEventListener('click',()=>{
 //     console.log(selectHr.value);
@@ -668,7 +671,7 @@ console.log(alarmHours);
 
 
 let timerMin = 0
-let timerSec = 60
+let timerSec = "00"
 
 const timer5m = document.querySelector('.timer5min')
 const timer10m = document.querySelector('.timer10min')
@@ -702,7 +705,7 @@ timer60m.addEventListener('click',()=>{
 })
 
 const timerDrop = function(a){
-    timerMin += a
+    timerMin += a+1
     // timerSec--
     if(timerMin<10){
         timerSet.innerHTML = `0${timerMin}:${timerSec}`
@@ -711,9 +714,17 @@ const timerDrop = function(a){
         timerSet.innerHTML = `${timerMin}:${timerSec}`
 
     }
-    setInterval(() => {
+    timerSec = 60
+    timerMin--
+    let thisInterval2 = setInterval(() => {
         if(timerMin != -1 && timerSec != 0){
+            // timerSec = '00'
             timerSec--
+            if(+timerMin < 1 && +timerSec < 60){
+                timerSet.style.color = 'red'
+            }
+            else timerSet.style.color = 'rgb(184, 243, 197)'
+                 
             if(timerMin<10){
                 timerMin = seconds00[+timerMin]
             }
@@ -725,18 +736,15 @@ const timerDrop = function(a){
                 timerSec = 59
                 timerMin = +timerMin
                 timerMin--
+                console.log(timerMin + 'hellosadsa');
             }  
         }
         else{
-        timerSet.innerHTML = `00:00`
-            timerholdcounter = 0
+        clearInterval(thisInterval2)
+        timerholdcounter = 0
+        timerMin = 0
+        timerSec = 0
         }
-        // if (timerMin == '00' && timerSec == '00') {
-        // timerSet.innerHTML = `${timerMin}:${timerSec}`
-            
-        // }
-        console.log(a);   
-        console.log(timerMin, timerSec);
     }, 1000);
 
 }
