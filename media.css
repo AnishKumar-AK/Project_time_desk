@@ -1,0 +1,377 @@
+/* @media (max-width: 768px) {
+
+  } */
+  @media only screen and (max-width:768px) {
+    body{
+        
+    margin: 0 0 0 0;
+    background-image: linear-gradient(to right bottom, #d16ba5, #c15ea9, #ac53ad, #934cb3, #7247b8, #5d42b4, #433db0, #1d38ac, #192f9f, #142792, #0e1e85, #071678);
+        width: 24rem;
+        overflow: visible;
+    }
+    .task-panels{
+        width: 9rem;
+        height: 170vh;
+    }
+    .task-main{
+        width: 11rem;
+    }
+
+    .Main{
+        width: 10rem;
+    }
+    .panel1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position:absolute;
+        /* height: rem; */
+        max-height: 50rem;
+        width: 23rem;
+        margin: 1rem 0 0 -7.4rem;
+        background-color: white;
+    }
+    .panel1Dark{
+        color: white;
+        background-color: #101213;
+    }
+
+    .Dark-Light-mode{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: .4rem 0 0 16.5rem;
+    }
+    .snow-main-page{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: .4rem 0 0 10rem;
+    }
+    .Dark-Light-mode2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: .4rem 0 0 16.5rem;
+
+    }
+    .Today-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: 3rem 0 0 1.2rem;
+    }
+    .My-Tasks{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: 2rem 0 0 1.2rem;
+    }
+    .Input-box-div{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        width: 20rem;
+        height: 5rem;
+        margin: 1rem 0 0 1.5rem;
+    }
+    .input-css{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        width: 20rem;
+        height: 2rem;
+        margin: 1rem 0 0 0rem;
+    }
+    .input-css-dark{
+        color: white;
+    }
+    .right-nav-panels{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        position: absolute;
+        height: 37rem;
+        width: 23rem;
+        background-color: #8df1fa;
+        margin: 51.5rem 0 0 -7.4rem;
+    }
+    .clock-current{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        height: 35rem;
+        width: 22rem;
+        opacity: 90%;
+        background-color: #101213;
+        margin: 52.5rem 0 0 -6.9rem;
+    }
+    .time-current{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        width: 2rem;
+        margin: 4rem 50% 0 26%;
+        font-size:35px;
+    }
+    .time-heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        width: 7rem;
+        margin: 7rem 0 0 7.1rem;
+    }
+    .stop-w-heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: 11.5rem 0 0 39%;
+        font-size: 12px;
+    }
+    .timer-count{
+        width: 4rem;
+        font-size: 100px;
+        margin: 12rem 0 0 12%;
+    }
+    .stop-w-start{
+        margin: 20rem 0 0 7%;
+    
+    }
+    .stop-w-stop{
+        margin: 20rem 0 0 36%;
+      
+    }
+    .stop-w-reset{
+        margin: 20rem 0 0 65%;
+    }
+    .minutes-heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin: 13rem 0 0 85%;
+        font-size: 11px;
+    }
+    .stop-w-start:hover,.stop-w-reset:hover,.stop-w-stop:hover{
+        transition: .2s;
+        color: white;
+    }
+    .time-zoom{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        padding-top: 1.4rem;
+        background-color: #7247b8;
+        height: 2.5rem;
+        border-radius: 10px;
+        margin: 14rem 0 0 6.5rem;
+    }
+    .add-task{
+        margin-left:1.8rem;
+    }
+    .remove-task{
+        margin:4rem 0 0 9.7rem;
+    }
+    .loading{
+        margin: 0 0 0 -7rem;
+        padding: 220% 0 50% 0;
+    }
+
+
+
+
+                                    /* zoom enabled from here */
+    .study-mode{
+
+        z-index: 0;
+        width: 100%;
+        height: 100vh;
+        margin: 0 0 0 -7rem;
+    }
+    .zoom-container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        z-index: 0;
+        height: 20vhrem;
+        width: 15rem;
+    }
+    .zoom-features{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        rotate: 90deg;
+        font-size: 15rem;
+        margin: -4.4rem 50% 0 5rem;
+        width: 4rem;
+    }
+    .closebtn{
+        rotate: 90deg;
+        z-index: 1;
+        color: white;
+        margin: 28rem 0 0 17rem;
+        width: 0rem;
+        font-size: 40px;
+    }
+    .tools{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        z-index: 1;
+        margin: 33.5rem 0 0 2rem;
+        width: 10rem;
+
+        border-radius: 20px 20px 0 0;
+        height: 4rem;
+        scale: .6;
+        rotate: 0deg;
+        opacity: 20%;
+    }
+    .Close-tools{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        z-index: 1;
+        border-radius: 20px 20px 0 0;
+
+        margin: 32.8rem 0 0 2rem;
+        width: 10rem;
+        scale: .6;
+        rotate: 0deg;
+    }
+    .tools:hover{
+        margin-left: 2rem;
+    }
+    .color-panel{
+        rotate: 90deg;
+        margin: 4.35rem 0 0 -27rem;
+    }
+    .ShowSeconds{
+        margin: 30.5rem 0 0 -8rem;
+        rotate: 90deg;
+    }
+    .zoom-features-seconds{
+        margin: 30.5rem 0 0 1rem;
+        rotate: 90deg;
+    
+    }
+    .snow-On-Off{
+        z-index: 1;
+        rotate: 90deg;
+        margin: 30.5rem 0 0 -4rem;
+    }
+    
+.zoom-timer-btn{
+    z-index: 2;
+    margin:22rem 0 0 12rem;
+    rotate: 90deg;
+    z-index: 99999;
+    font-size: 20px;
+}
+.zoom-Alarm-btn{
+    z-index: 2;
+
+    margin:30rem 0 0 13rem;
+    rotate: 90deg;
+}
+
+.zoom-stop-w-btn{
+    z-index: 2;
+
+    margin:37rem 0 0 13rem;
+    rotate: 90deg;
+    
+}
+
+.zoom-clock-btn{
+    z-index: 2;
+    margin:13rem 0 0 12rem;
+    rotate: 90deg;
+    
+}
+.day-month{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    margin: 17rem 0 0 -15rem;
+    rotate: 90deg;
+}
+.TimerSet{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    /* margin: 11rem 0 0 0; */
+    margin: 8rem 0 0 -3rem;
+
+    rotate: 90deg;
+    font-size: 15rem;
+}
+.timerSet-empty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    margin-top: 4rem;
+    flex-direction: column;
+    justify-content: center;
+}
+.timer5min,.timer10min,.timer30min,.timer60min{
+    z-index: 3;
+margin:3.5rem 0 0 -3.5rem;
+rotate: 90deg;
+width: 5rem;
+}
+.alarmContainer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    margin: -8rem 0 0 -15rem;
+    width: 2rem;
+    height: 2rem;
+}
+.stop-w-second{
+    font-size:15rem;
+    rotate: 90deg;
+    margin: 11.5rem 0 0 .5rem;
+
+    width: 20rem;
+}
+.resetM{
+    margin: 43.5rem 0 0 -3rem;
+    rotate: 90deg;
+
+}
+.startM{
+    rotate: 90deg;
+    margin: 30.5rem 0 0 -3rem;
+}
+.stopM{
+    rotate: 90deg;
+    margin: 37rem 0 0 -3rem;
+}
+.alarmContainer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    display: none;
+    opacity: 0%;
+    rotate: 90deg;
+    height: 0rem;
+    opacity: 0;
+    display: block;
+    background-color: red;
+    margin: 10rem 0 0 10rem;
+    width: 0rem;
+}
+.oldAlarm{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    width: 20rem;
+    font-size: 4rem;
+    margin: -4rem 0 0 0rem;
+}
+.ChangeAlarm{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    width: 20rem;
+    margin: 0rem 0 0 0rem;
+    font-size: 1.8rem;
+}
+.alarmNum{
+    display: none;
+    height: 15rem;
+    width: 30rem;
+    margin: -5rem 0 0 0rem;
+}
+.PostAlarm{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    height: 2rem;
+    width: 6rem;
+    margin: 11rem 0 0 12rem;
+}
+.AlarmNotification{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    opacity: 0;
+        /* display: ; */
+    rotate: 90deg;
+    margin-left: -4rem;
+    scale: 0.6;
+    margin-top: 20rem;
+}
+}
