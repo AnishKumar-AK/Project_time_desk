@@ -142,9 +142,12 @@ body{
 }
 
 .panel1{
+    display: table;
     position:absolute; 
-    height: 100vh;
+    max-height: 55rem;
+    min-height: 10rem;
     width: 70rem;
+    padding-bottom: 8rem;
     color: black;
     border: 1px solid rgb(124, 78, 78);
     border-radius: 1vh;
@@ -876,12 +879,13 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.8rem;
 }
 .AlarmNotification{
-    z-index: 50;
+    z-index: 8;
     height: 10rem;
     width: 30rem;
     margin-left: 38%;
     margin-top: 2rem;
-    opacity: 1;
+    opacity: 0;
+    transform: translateY(-10rem);
     border-radius: 2.65rem;
     background-color: rgb(62, 110, 104);
     position: absolute;

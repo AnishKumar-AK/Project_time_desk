@@ -580,9 +580,13 @@ ALarmOffBtn.addEventListener('click', ()=>{
     if(holdAlarm == 2){
         audioElement.pause()
         // alarmNotiPanel.style['margin-top'] = '-11rem'
-        alarmNotiPanel.style.transform = 'translateY(0px)'
-        alarmNotiPanel.style.display = 'none'
+        alarmNotiPanel.style.transform = 'translateY(-10rem)'
         alarmNotiPanel.style.opacity = 0
+        setTimeout(() => {
+            alarmNotiPanel.style.display = 'none'
+        }, 500);
+
+
 
     }
 })
@@ -597,19 +601,19 @@ const alarmTime = function(){                          // function checks alarm 
         if(holdAlarm == 0){
             audioElement.play()
             console.log('alarm offf');
-            alarmNotiPanel.style.opacity = 1
             alarmNotiPanel.style.display = 'block'
-            alarmNotiPanel.style.transform = 'translateY(42px)'
-            
+            setTimeout(() => {
+                alarmNotiPanel.style.opacity = 1
+                alarmNotiPanel.style.transform = 'translateY(0.1rem)'
+            }, 1);
         }
         holdAlarm = 1
     } 
     else {
         audioElement.pause()
-        alarmNotiPanel.style.opacity = 0
         alarmNotiPanel.style.display = 'none'
-
-        alarmNotiPanel.style.transform = 'translateY(0px)'
+        alarmNotiPanel.style.transform = 'translateY(-10rem)'
+        alarmNotiPanel.style.opacity = 0
 
         // alarmNotiPanel.style['margin-top'] = '-11rem'
         holdAlarm = 0
