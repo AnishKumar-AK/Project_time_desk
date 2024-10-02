@@ -8,6 +8,7 @@
     background-image: linear-gradient(to right bottom, #d16ba5, #c15ea9, #ac53ad, #934cb3, #7247b8, #5d42b4, #433db0, #1d38ac, #192f9f, #142792, #0e1e85, #071678);
         width: 24rem;
         overflow: visible;
+        user-select: none;
     }
     .task-panels{
     font-weight: 900;
@@ -23,8 +24,8 @@
     }
     .panel1{
         position:absolute;
-        /* height: rem; */
-        max-height: 50rem;
+        height: 40rem;
+        /* max-height: 50rem; */
         width: 23rem;
         margin: 1rem 0 0 -7.4rem;
         background-color: white;

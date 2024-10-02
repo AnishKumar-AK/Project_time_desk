@@ -142,10 +142,9 @@ body{
 }
 
 .panel1{
-    display: table;
     position:absolute; 
-    max-height: 55rem;
-    min-height: 10rem;
+    height: 53.85rem;
+    /* min-height: 10rem; */
     width: 70rem;
     padding-bottom: 8rem;
     color: black;
