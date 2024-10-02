@@ -1,0 +1,72 @@
+@media only screen and (max-height:840px) {
+    .task-panels{
+        font-weight: 900;
+            /* width: 9rem; */
+            height: 180vh;
+        }
+        /* body{
+            width: 24rem;
+        } */
+}
+@media only screen and (max-height:790px) {
+    .task-panels{
+        font-weight: 900;
+            /* width: 9rem; */
+            height: 190vh;
+        }
+        /* body{
+            width: 24rem;
+        } */
+}
+@media only screen and (max-height:754px) {
+    .task-panels{
+        font-weight: 900;
+            /* width: 9rem; */
+            height: 200vh;
+        }
+        /* body{
+            width: 24rem;
+        } */
+}
+@media only screen and (max-width:398px),(max-height:668px) {
+    .task-panels{
+        font-weight: 900;
+            width: 8rem;
+            height: 220vh;
+        }
+        body{
+            width: 21.3rem;
+        }
+}
+@media only screen and (max-width:430px),(max-height:668px) {
+    .panel1{
+        margin-left: -6rem;
+    }
+    .right-nav-panels{
+        margin: 51.5rem 0 0 -6rem;
+    }
+    .clock-current{
+        margin: 52.5rem 0 0 -5.5rem;
+    }
+}
+@media only screen and (max-width:376px) {
+    .task-panels{
+        font-weight: 900;
+            width: 9.8rem;
+            height: 220vh;
+        }
+        body{
+            width: 22.1rem;
+        }
+}
+@media only screen and (max-height:896px) {
+    .panel1{
+        margin: 1rem 0 0 -6.5rem;
+    }
+    .right-nav-panels{
+        margin: 51.5rem 0 0 -6.5rem;
+    }
+    .clock-current{
+        margin: 52.5rem 0 0 -6rem;
+    }
+}
