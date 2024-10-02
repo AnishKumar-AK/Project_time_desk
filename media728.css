@@ -4,9 +4,9 @@
             /* width: 9rem; */
             height: 180vh;
         }
-        body{
-            user-select: none;
-        }
+        /* body{
+            width: 24rem;
+        } */
 }
 @media only screen and (max-height:790px) {
     .task-panels{
@@ -14,10 +14,9 @@
             /* width: 9rem; */
             height: 190vh;
         }
-        body{
-            user-select: none;
-
-        }
+        /* body{
+            width: 24rem;
+        } */
 }
 @media only screen and (max-height:754px) {
     .task-panels{
@@ -25,10 +24,9 @@
             /* width: 9rem; */
             height: 200vh;
         }
-        body{
-            user-select: none;
-
-        }
+        /* body{
+            width: 24rem;
+        } */
 }
 @media only screen and (max-width:398px),(max-height:668px) {
     .task-panels{
@@ -36,21 +34,8 @@
             width: 8rem;
             height: 220vh;
         }
-        .study-mode{
-            width: 105.5%;
-            height: 105.5%;
-        }
         body{
-            /* height: 98vh; */
-            user-select: none;
-        }
-        .zoom-features{
-
-            margin: -6.4rem 50% 0 5rem;
-        }
-        .day-month{
-
-            margin: 13rem 0 0 -15rem;
+            width: 21.3rem;
         }
 }
 @media only screen and (max-width:430px),(max-height:668px) {
@@ -64,6 +49,19 @@
         margin: 52.5rem 0 0 -5.5rem;
     }
 }
+/* @media only screen and (max-width:376px) {
+    .task-panels{
+        font-weight: 900;
+            width: 9.8rem;
+            height: 220vh;
+        }
+        body{
+            width: 22.1rem;
+        }
+} */
+
+
+
 @media only screen and (max-width:376px) {
     .task-panels{
         font-weight: 900;
@@ -150,6 +148,11 @@
         }
         
 }
+
+
+
+
+
 @media only screen and (max-height:896px) {
     .panel1{
         margin: 1rem 0 0 -6.5rem;
@@ -159,8 +162,5 @@
     }
     .clock-current{
         margin: 52.5rem 0 0 -6rem;
-    }
-    .body{
-        user-select: none;
     }
 }
