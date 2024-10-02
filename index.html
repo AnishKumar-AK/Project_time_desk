@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="images/1hourglass.png" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Time Desk</title>
+        <meta name="description" content="This is a task management project">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="media.css">
+    </head>
+    <body>
+        <div class="Main">
+            <span id="audio"></span>
+            <div class="task-main">
+                <div class="loading">
+                    <span class="load1" style="color: rgb(15, 18, 206);">.</span>
+                    <span class="load2" style="color: rgb(49, 12, 133);">.</span>
+                    <span class="load3" style="color: rgb(19, 19, 175);">.</span>
+                </div>
+                <div class="AlarmNotification">
+                    <span class="notiHeading">Alarm Clock</span>
+                    <span class="notiTime">00:00</span>
+                    <div class="turnOffAlarm">Turn Off</div>
+                    <img src="images/notiBell.png" alt="">
+                </div>
+                <div class="study-mode">         
+                    <div class="zoom-container">
+                        <div class="zoom-timer-btn">Stop Watch</div>
+                        <div class="empty-time">
+                            <div class="stop-w-second">00:00</div>
+                            <span class="stop-w-start startM">START</span>
+                            <span class="stop-w-stop stopM">STOP</span>
+                            <span class="stop-w-reset resetM">RESET</span>
+                        </div>
+                        <div class="zoom-stop-w-btn TimerSet0">Timer</div>
+                        <div class="TimerSet">00:00</div>
+                            <div class="timerSet-empty">
+                                <div class="timer5min">5 min</div>
+                                <div class="timer10min">10 min</div>
+                                <div class="timer30min">30 min</div>
+                                <div class="timer60min">60 min</div>
+                            </div>
+                        <div class="zoom-Alarm-btn">Alarm</div>
+                        <div class="alarmContainer">
+                            <!-- <div class="alarmSelectDiv">
+                                <hr class="PlusH">
+                                <hr class="PlusV">
+                            </div> -->
+                            <p class="oldAlarm">00:00</p>
+                            <br>
+                            <p class="ChangeAlarm">+Change Alarm</p>
+                            <div class="alarmNum">
+                                 <select id="hr">
+                                </select>
+                                 <select id="Min">
+                                 <!-- <option value="1AM">01</option> -->
+                                </select>
+                                <div class="setbackground"></div>
+                                <button class="PostAlarm">Set Alarm</button>
+                            </div>
+                            
+                        </div>
+                        <div class="zoom-clock-btn">Clock</div>
+                        <div class="zoom-features">00:00</div>
+                        <div class="zoom-features-seconds">00</div>
+                        <div class="closebtn">Close</div>
+                        <button class="tools">Tools</button>
+                        <button class="Close-tools">Close</button>
+                        <button class="ShowSeconds">show Seconds</button>
+                        <button class="snow-On-Off">Snow OFF</button>
+                        <div class="color-panel">
+                            <div class="color1">palevioletred</div>
+                            <div class="color1">sandybrown</div>
+                            <div class="color1">#758694</div>
+                            <div class="color1">#795757</div>
+                            <div class="color1">rebeccapurple</div>
+                            <div class="color1">#101213</div>
+                            <div class="color1">#134B70</div>
+                            <div class="color1">#0D7C66</div>
+                        </div>
+                        <div class="day-month">Day, Month date</div>
+                    </div>
+                </div>
+                <div class="task-panels">
+              
+                    <div class="right-nav-panels"></div>
+                    <div class="clock-current">
+                        <span class="time-heading">Current Time</span>
+                        <span class="time-current"></span>
+                        <span class="time-zoom">Study mode</span>
+                        <hr class="horizontal1">
+                        <span class="timer-count">00:00 
+                        </span>
+                            <span class="minutes-heading">minutes</span>
+                        <span class="stop-w-heading">Stop-Watch</span>
+                        <span class="stop-w-start">START</span>
+                        <span class="stop-w-stop">STOP</span>
+                        <span class="stop-w-reset">RESET</span>
+                    </div>
+                    <div class="panel1">
+                         <div class="Dark-Light-mode">Dark</div>
+                         <div class="Dark-Light-mode2">Light</div>
+                         <div class="snow-main-page">Snow</div>
+                        <div class="Today-text">Today</div>
+                        <div class="My-Tasks">My Projects</div>
+                        <div class="task-input-container">
+                            <!-- <div class="Input-box-div">
+                                <input placeholder="Type your task here!🤧" class="input1" type="text">
+                            </div> -->
+                        </div> 
+                        <button class="get-started add-task">Add Task</button>
+                        <button class="get-started remove-task">Remove Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js" async defer></script>
+        <script src="snowfall.min.js"></script>
+    </body>
+</html>
