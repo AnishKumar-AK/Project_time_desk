@@ -3,13 +3,14 @@
   } */
   @media only screen and (max-width:768px) {
     body{
-        
+    font-weight: 900;
     margin: 0 0 0 0;
     background-image: linear-gradient(to right bottom, #d16ba5, #c15ea9, #ac53ad, #934cb3, #7247b8, #5d42b4, #433db0, #1d38ac, #192f9f, #142792, #0e1e85, #071678);
         width: 24rem;
         overflow: visible;
     }
     .task-panels{
+    font-weight: 900;
         width: 9rem;
         height: 170vh;
     }
@@ -21,7 +22,6 @@
         width: 10rem;
     }
     .panel1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         position:absolute;
         /* height: rem; */
         max-height: 50rem;
@@ -35,40 +35,33 @@
     }
 
     .Dark-Light-mode{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: .4rem 0 0 16.5rem;
     }
     .snow-main-page{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: .4rem 0 0 10rem;
     }
     .Dark-Light-mode2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: .4rem 0 0 16.5rem;
 
     }
     .Today-text{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: 3rem 0 0 1.2rem;
     }
     .My-Tasks{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: 2rem 0 0 1.2rem;
     }
     .Input-box-div{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         width: 20rem;
         height: 5rem;
         margin: 1rem 0 0 1.5rem;
     }
     .input-css{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         width: 20rem;
         height: 2rem;
@@ -78,7 +71,6 @@
         color: white;
     }
     .right-nav-panels{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         position: absolute;
         height: 37rem;
@@ -87,7 +79,6 @@
         margin: 51.5rem 0 0 -7.4rem;
     }
     .clock-current{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         height: 35rem;
         width: 22rem;
@@ -96,20 +87,17 @@
         margin: 52.5rem 0 0 -6.9rem;
     }
     .time-current{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         width: 2rem;
         margin: 4rem 50% 0 26%;
         font-size:35px;
     }
     .time-heading{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         width: 7rem;
         margin: 7rem 0 0 7.1rem;
     }
     .stop-w-heading{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: 11.5rem 0 0 39%;
         font-size: 12px;
@@ -131,7 +119,6 @@
         margin: 20rem 0 0 65%;
     }
     .minutes-heading{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         margin: 13rem 0 0 85%;
         font-size: 11px;
@@ -141,7 +128,6 @@
         color: white;
     }
     .time-zoom{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         padding-top: 1.4rem;
         background-color: #7247b8;
@@ -172,14 +158,12 @@
         margin: 0 0 0 -7rem;
     }
     .zoom-container{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         z-index: 0;
         height: 20vhrem;
         width: 15rem;
     }
     .zoom-features{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         rotate: 90deg;
         font-size: 15rem;
@@ -195,7 +179,6 @@
         font-size: 40px;
     }
     .tools{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         z-index: 1;
         margin: 33.5rem 0 0 2rem;
@@ -208,7 +191,6 @@
         opacity: 20%;
     }
     .Close-tools{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
         z-index: 1;
         border-radius: 20px 20px 0 0;
@@ -269,13 +251,11 @@
     
 }
 .day-month{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     margin: 17rem 0 0 -15rem;
     rotate: 90deg;
 }
 .TimerSet{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     /* margin: 11rem 0 0 0; */
     margin: 8rem 0 0 -3rem;
@@ -284,7 +264,6 @@
     font-size: 15rem;
 }
 .timerSet-empty{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     margin-top: 4rem;
     flex-direction: column;
@@ -297,7 +276,6 @@ rotate: 90deg;
 width: 5rem;
 }
 .alarmContainer{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     margin: -8rem 0 0 -15rem;
     width: 2rem;
@@ -324,8 +302,6 @@ width: 5rem;
     margin: 37rem 0 0 -3rem;
 }
 .alarmContainer{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 900;
     display: none;
     opacity: 0%;
     rotate: 90deg;
@@ -337,14 +313,12 @@ width: 5rem;
     width: 0rem;
 }
 .oldAlarm{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     width: 20rem;
     font-size: 4rem;
     margin: -4rem 0 0 0rem;
 }
 .ChangeAlarm{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
     width: 20rem;
     margin: 0rem 0 0 0rem;
@@ -357,16 +331,11 @@ width: 5rem;
     margin: -5rem 0 0 0rem;
 }
 .PostAlarm{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 900;
     height: 2rem;
     width: 6rem;
     margin: 11rem 0 0 12rem;
 }
 .AlarmNotification{
-
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 900;
     opacity: 0;
         /* display: ; */
     rotate: 90deg;
