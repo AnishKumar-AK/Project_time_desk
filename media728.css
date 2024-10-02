@@ -34,6 +34,10 @@
             width: 8rem;
             height: 220vh;
         }
+        .study-mode{
+            width: 105.5%;
+            height: 102%;
+        }
         body{
             width: 21.3rem;
         }
