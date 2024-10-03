@@ -28,16 +28,6 @@
             width: 24rem;
         } */
 }
-@media only screen and (max-width:398px),(max-height:668px) {
-    .task-panels{
-        font-weight: 900;
-            width: 8rem;
-            height: 220vh;
-        }
-        body{
-            width: 21.3rem;
-        }
-}
 @media only screen and (max-width:430px),(max-height:668px) {
     .panel1{
         margin-left: -6rem;
@@ -49,16 +39,59 @@
         margin: 52.5rem 0 0 -5.5rem;
     }
 }
-/* @media only screen and (max-width:376px) {
+@media only screen and (max-width:398px),(max-height:668px) {
     .task-panels{
         font-weight: 900;
-            width: 9.8rem;
+            width: 8rem;
             height: 220vh;
         }
         body{
-            width: 22.1rem;
+            width: 21.3rem;
         }
-} */
+        body a{
+            user-select: none;
+        }
+        .study-mode{
+            width: 106%;
+            height: 101%;
+        }
+        .zoom-features{
+            margin: -8.5rem 50% 0 5rem;
+        }
+        .color-panel{
+            scale: .7;
+            /* rotate: 90deg; */
+            margin: 1rem 0 0 -27rem;
+        }
+        .ShowSeconds{
+            rotate: 0deg;
+            margin: 29.5rem 0 0 -4.6rem;
+        }
+        .snow-On-Off{
+            z-index: 0;
+            /* display: none; */
+            /* rotate: 90deg; */
+            opacity: 0;
+            margin: 28rem 0 0 -3rem;
+        }
+        
+        .tools{
+            rotate: 90deg;
+            margin: 23.5rem 0 0 -8.6rem;
+        }
+        .Close-tools{
+            rotate: 90deg;
+            margin: 23.5rem 0 0 -8.6rem;
+
+        }
+        .tools:hover{
+            margin-left: -8.6rem;
+        }
+        .closebtn{
+            margin: 23.5rem 0 0 16.3rem;
+            scale: .8;
+        }
+}
 
 
 
@@ -73,7 +106,6 @@
             width: 22.1rem;
         }
         .zoom-features{
-
             margin: -9rem 50% 0 5rem;
         }
         .day-month{
@@ -96,6 +128,7 @@
             margin: 25rem 0 0 -4.2rem;
         }
         .snow-On-Off{
+            /* display: none; */
             margin: -8.5rem 0 0 -3rem;
         }
 
