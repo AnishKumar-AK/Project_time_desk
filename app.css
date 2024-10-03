@@ -534,6 +534,14 @@ input{
     /* animation-duration: 1.2s; */
     
 }
+.snowMOBILE{
+    position: absolute;
+    rotate: 90deg;
+    height: 215%;
+    margin: -14rem 0 0 10.5rem;
+    width: 80%;
+    /* background-color: red; */
+}
 .study-mode{
     position: absolute;
     margin: auto;
@@ -556,7 +564,7 @@ input{
 .zoom-container{
     /* transition: 1s; */
     /* position: absolute; */
-    margin-inline: 23%;
+    margin-inline: 22%;
     margin-top: 14%;
     color: white;
     z-index: 8;
@@ -635,7 +643,7 @@ input{
     /* height: rem; */
 }
 .tools:hover{
-    margin-left: 87rem;
+    margin-left: 87.6rem;
 }
 .Close-tools{
     /* color: black; */
@@ -946,14 +954,16 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 3rem 0 0 0rem;
     /* background-color: red; */
     background: transparent;
-    color:  black;
+    color:  white;
     height: 8rem;
 }
 #Min{
     position: absolute;
     margin: 4rem 0 0 18rem;
+    background: transparent;
+
     /* background-color: red; */
-    color: black;
+    color: white;
     font-size: 5rem;
     width: 6rem;
     height: 6rem;
@@ -976,7 +986,7 @@ select {
     justify-content: center;
     margin: 3rem 0 0 49rem;
     border-radius: 2rem;
-    background-color: #ffffff;
+    background-color: #1a1919;
     /* z-index: 13; */
 }
 .PostAlarm{
@@ -989,7 +999,7 @@ select {
     width: 6rem;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 7%;
-    background-color: #422b2b;
+    background-color: #054158;
     scale: 1.4;
     margin: 11rem 0 0 12rem;
 }
@@ -999,7 +1009,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 5rem;
     width: 15.1rem;
     rotate: 90deg;
-    background-color: rgb(214, 18, 18);
+    background-color: rgb(60, 18, 214);
     /* border-radius: 4px; */
     /* scale: 2; */
     margin: 5rem 0 0 -4.1rem;

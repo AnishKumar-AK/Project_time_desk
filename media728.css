@@ -12,7 +12,7 @@
     .task-panels{
         font-weight: 900;
             /* width: 9rem; */
-            height: 190vh;
+            height: 200vh;
         }
         /* body{
             width: 24rem;
@@ -43,7 +43,7 @@
     .task-panels{
         font-weight: 900;
             width: 8rem;
-            height: 220vh;
+            height: 180vh;
         }
         body{
             width: 21.3rem;
@@ -51,9 +51,18 @@
         body a{
             user-select: none;
         }
+        .snowMOBILE{
+            position: absolute;
+            rotate: 90deg;
+            height:46%;
+            margin: 15rem 0 0 -10.9rem;
+            width: 190%;
+            /* background-color: red; */
+        }
         .study-mode{
+            /* rotate: -90deg; */
             width: 106%;
-            height: 101%;
+            height: 100.6%;
         }
         .zoom-features{
             margin: -8.5rem 50% 0 5rem;
@@ -64,31 +73,37 @@
             margin: 1rem 0 0 -27rem;
         }
         .ShowSeconds{
-            rotate: 0deg;
-            margin: 29.5rem 0 0 -4.6rem;
+            /* rotate: 0deg; */
+            z-index: 4;
+            width: 5.5rem;
+            /* scale: .8; */
+            height: 3rem;
+            margin: 18.6rem 0 0 -5.4rem;
         }
         .snow-On-Off{
-            z-index: 0;
+            z-index: 4;
             /* display: none; */
-            /* rotate: 90deg; */
-            opacity: 0;
-            margin: 28rem 0 0 -3rem;
+            /* rotate: 0deg; */
+            width: 4rem;
+            height: 3rem;
+            /* opacity: 0; */
+            margin: 23.5rem 0 0 -4.7rem;
         }
         
         .tools{
             rotate: 90deg;
-            margin: 23.5rem 0 0 -8.6rem;
+            margin: 28.4rem 0 0 -8.6rem;
         }
         .Close-tools{
             rotate: 90deg;
-            margin: 23.5rem 0 0 -8.6rem;
+            margin: 28rem 0 0 -8.6rem;
 
         }
         .tools:hover{
             margin-left: -8.6rem;
         }
         .closebtn{
-            margin: 23.5rem 0 0 16.3rem;
+            margin: 28.4rem 0 0 16.3rem;
             scale: .8;
         }
 }
@@ -105,6 +120,7 @@
             user-select: none;
             width: 22.1rem;
         }
+        
         .zoom-features{
             margin: -9rem 50% 0 5rem;
         }
@@ -113,7 +129,7 @@
             margin: 13rem 0 0 -15rem;
         }
         .study-mode{
-            height: 101.6%;
+            height: 102%;
         }
         .closebtn{
             margin: 23rem 0 0 16.3rem;
@@ -125,9 +141,12 @@
             margin: 3rem 0 0 -27rem;
         }
         .ShowSeconds{
+            z-index: 3;
+            rotate: 90deg;
             margin: 25rem 0 0 -4.2rem;
         }
         .snow-On-Off{
+            /* opacity: 1; */
             /* display: none; */
             margin: -8.5rem 0 0 -3rem;
         }
@@ -150,7 +169,7 @@
             
         }
         .zoom-features-seconds{
-            margin: 28rem 0 0 1rem;
+            margin: 28rem 0 0 0rem;
             scale: .6;
         
         }

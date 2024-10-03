@@ -232,6 +232,7 @@
 }
 .add-task{
     scale: 1.1;
+    z-index: 2;
     position: absolute;
     margin:4rem;
     /* opacity: 90%; */
@@ -239,6 +240,8 @@
 .remove-task{
     /* opacity: 80%; */
     display: flex;
+    z-index: 2;
+
     align-self: flex-end;
   /* box-shadow: #f0735d 0 10px 20px -10px; */
 

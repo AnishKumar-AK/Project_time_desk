@@ -31,7 +31,7 @@ const dayMonthDate = document.querySelector('.day-month')
 const TimeEmptyContainer = document.querySelector('.empty-time')
 
 
-// loading.style.display = 'block'
+loading.style.display = 'block'
 
 setTimeout(() => {
 try {
@@ -319,6 +319,7 @@ const startOne = () => {
 }
 TimeZoomBtn.addEventListener('click', () =>{
     console.log('study mode active');
+    clearSnow();
     loading.style.display = 'block'
     TaskPanels.style.display = 'none'
     // body.style.overflow = hidden
