@@ -454,6 +454,7 @@ const zoomOpacityAllBtn = function(){
     timerSetEmptyContainer.style.opacity = '0'
     timerSetEmptyContainer.style.opacity = '0'
     alarmContainer.style.opacity = '0'   
+    alarmContainer.style.display = 'none'   
 }
 zoomTimer.addEventListener('click', ()=>{
     zoomOpacityAllBtn()
@@ -568,7 +569,9 @@ zoomAlarm.addEventListener('click',()=>{
         SetalarmDiv.style.display = 'none'
         changeAlarm.style.display = 'block'
     }
-    alarmContainer.style.opacity = '100%'   
+    alarmContainer.style.opacity = '100%' 
+    alarmContainer.style.display = 'block' 
+      
 
 })
 

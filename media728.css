@@ -62,7 +62,7 @@
         .study-mode{
             /* rotate: -90deg; */
             width: 106%;
-            height: 100.6%;
+            height: 101.6%;
         }
         .zoom-features{
             /* height: 30vh; */
@@ -71,7 +71,7 @@
         .color-panel{
             scale: .7;
             /* rotate: 90deg; */
-            margin: 1rem 0 0 -27rem;
+            margin: 1rem 0 0 -26.7rem;
         }
         .ShowSeconds{
             /* rotate: 0deg; */
@@ -88,7 +88,7 @@
             width: 4rem;
             height: 3rem;
             /* opacity: 0; */
-            margin: 23.5rem 0 0 -4.7rem;
+            margin: 23.5rem 0 0 -4.6rem;
         }
         
         .tools{
