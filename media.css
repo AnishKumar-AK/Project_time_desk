@@ -143,6 +143,7 @@
         margin:4rem 0 0 9.7rem;
     }
     .loading{
+        width: 106%;
         margin: 0 0 0 -7rem;
         padding: 220% 0 50% 0;
     }
@@ -168,7 +169,7 @@
 
         rotate: 90deg;
         font-size: 15rem;
-        margin: -4.4rem 50% 0 5rem;
+        margin: -4.4rem 50% 0 6rem;
         width: 4rem;
     }
     .closebtn{
@@ -254,11 +255,12 @@
 .day-month{
     margin: 17rem 0 0 -15rem;
     rotate: 90deg;
+    opacity: 55%;
 }
 .TimerSet{
 
     /* margin: 11rem 0 0 0; */
-    margin: 8rem 0 0 -3rem;
+    margin: 8rem 0 0 -2rem;
     color: white;
     rotate: 90deg;
     font-size: 15rem;
@@ -279,7 +281,7 @@ width: 5rem;
 .stop-w-second{
     font-size:15rem;
     rotate: 90deg;
-    margin: 11.5rem 0 0 .5rem;
+    margin: 11.5rem 0 0 1.5rem;
 
     width: 20rem;
 }

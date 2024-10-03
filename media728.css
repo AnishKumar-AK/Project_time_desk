@@ -55,7 +55,7 @@
             position: absolute;
             rotate: 90deg;
             height:46%;
-            margin: 15rem 0 0 -10.9rem;
+            margin: 11rem 0 0 -10.9rem;
             width: 190%;
             background-color: transparent;
         }
@@ -65,7 +65,8 @@
             height: 100.6%;
         }
         .zoom-features{
-            margin: -8.5rem 50% 0 5rem;
+            /* height: 30vh; */
+            margin: -8.5rem 50% 0 6rem;
         }
         .color-panel{
             scale: .7;
@@ -103,7 +104,7 @@
             margin-left: -8.6rem;
         }
         .closebtn{
-            margin: 28.4rem 0 0 16.3rem;
+            margin: 23.4rem 0 0 16.3rem;
             scale: .8;
         }
 }
@@ -197,6 +198,15 @@
         }
         .tools:hover{
             margin-left: -8.6rem;
+        } 
+        .snowMOBILE{
+            position: absolute;
+            rotate: 90deg;
+            /* height:4%; */
+            scale: .6;
+            margin: 0rem 0 0 -10.9rem;
+            /* width: 190%; */
+            background-color: red;
         }
         
 }
@@ -209,10 +219,19 @@
     .panel1{
         margin: 1rem 0 0 -6.5rem;
     }
+
     .right-nav-panels{
         margin: 51.5rem 0 0 -6.5rem;
     }
     .clock-current{
         margin: 52.5rem 0 0 -6rem;
+    }
+    .snowMOBILE{
+        position: absolute;
+        rotate: 90deg;
+        height:41%;
+        margin: 16rem 0 0 -10.9rem;
+        width: 190%;
+        background-color: transparent;
     }
 }

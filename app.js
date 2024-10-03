@@ -462,7 +462,7 @@ zoomTimer.addEventListener('click', ()=>{
 zoomClock.addEventListener('click', ()=>{
     zoomOpacityAllBtn()
     zoomed.style.opacity = '100'
-    dayMonthDate.style.opacity = '100'
+    dayMonthDate.style.opacity = '55'
     ZoomSeconds.style.opacity = '100'
 })
 timerSetZoom.addEventListener('click', ()=>{
@@ -818,6 +818,5 @@ const btnopacity = function (){            // function to control all zoom butto
 } catch (error) {
   console.log(error);
   loading.style.display = 'block'
-     
 }
 }, 600);
