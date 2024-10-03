@@ -184,7 +184,7 @@ body{
     letter-spacing: 1px;
     width: 6rem;
     border-radius: 20px;
-    background-color: orange;
+    background-color: #282841;
     margin: 1.72rem 0 0 56.4rem;
     cursor: pointer;
 }
@@ -536,11 +536,11 @@ input{
 }
 .snowMOBILE{
     position: absolute;
-    rotate: 90deg;
+    /* rotate: 90deg; */
     height: 215%;
-    margin: -14rem 0 0 10.5rem;
-    width: 80%;
-    /* background-color: red; */
+    margin: -14rem 0 0 1.5rem;
+    width: 98%;
+    background-color: transparent;
 }
 .study-mode{
     position: absolute;
@@ -742,7 +742,7 @@ input{
     margin: -7.3rem 0 0 81.4rem;
     outline: none;
     height: 2rem;
-    background-color: orange;
+    background-color: #5E5DF0;
 }
 .ShowSeconds:hover,.snow-On-Off:hover{
     border: 1px solid white;

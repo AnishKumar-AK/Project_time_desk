@@ -319,7 +319,8 @@ const startOne = () => {
 }
 TimeZoomBtn.addEventListener('click', () =>{
     console.log('study mode active');
-    clearSnow();
+    // clearSnow();
+    secondSnow();
     loading.style.display = 'block'
     TaskPanels.style.display = 'none'
     // body.style.overflow = hidden
