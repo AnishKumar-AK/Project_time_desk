@@ -27,6 +27,7 @@ body{
     overflow: hidden;
     user-select: none;
 }
+
 .dark-mode{
     background-color: #101213;
     color: white;

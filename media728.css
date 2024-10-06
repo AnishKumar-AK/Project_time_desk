@@ -48,9 +48,7 @@
         body{
             width: 21.3rem;
         }
-        body a{
-            user-select: none;
-        }
+       
         .snowMOBILE{
             position: absolute;
             rotate: 90deg;
