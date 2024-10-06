@@ -202,11 +202,12 @@
         .snowMOBILE{
             position: absolute;
             rotate: 90deg;
+            display: none;
             /* height:4%; */
-            scale: .6;
-            margin: 0rem 0 0 -10.9rem;
+            /* scale: .8; */
+            margin: -4rem 0 0 1.9rem;
             /* width: 190%; */
-            background-color: red;
+            background-color: transparent;
         }
         
 }
@@ -230,7 +231,7 @@
         position: absolute;
         rotate: 90deg;
         height:41%;
-        margin: 16rem 0 0 -10.9rem;
+        margin: 15rem 0 0 -10.9rem;
         width: 190%;
         background-color: transparent;
     }

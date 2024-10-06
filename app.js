@@ -319,8 +319,8 @@ const startOne = () => {
 }
 TimeZoomBtn.addEventListener('click', () =>{
     console.log('study mode active');
-    // clearSnow();
-    secondSnow();
+    clearSnow();
+    // secondSnow();
     loading.style.display = 'block'
     TaskPanels.style.display = 'none'
     // body.style.overflow = hidden
@@ -333,7 +333,7 @@ ZoomCloseBtn.addEventListener('click', () =>{
     console.log('study mode inactive');
     loading.style.display = 'block'
     TaskPanels.style.display = 'block'
-
+    clearSnow();
     setTimeout(() => {
         loading.style.display = 'none'
         document.querySelector('.study-mode').style.display = 'none'
