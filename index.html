@@ -1,130 +1,124 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="shortcut icon" href="1hourglass.png" type="image/x-icon">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Time Desk</title>
-        <meta name="description" content="This is a task management project">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="app.css">
-        <link rel="stylesheet" href="media.css">
-    </head>
-    <body>
-        <div class="main-bg">
-            <!-- <div class="nav-container">
-                <div class="alarm">
-                </div>
-                <div class="pomo">
-                </div>
-                <div class="timer">
-                </div>
-            </div> -->
-            <div class="ele-container">
-                <div class="logo-container">
-                    <!-- <div class="clockHand"></div> -->
-                    <!-- <div class="clockBig"></div>
-                    <div class="clockBigLeft"></div>
-                    <div class="clockBigBottomLeft"></div>
-                    <div class="clockBigRight"></div>
-                    <div class="clockBigBottomRight"></div>
-                    <div class="clockBig2"></div>
-                    <div class="clockLayer2"></div>
-                    <div class="clockLayer3"></div> -->
-                    <a href="index.html">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images/1hourglass.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Time Desk</title>
+    <meta name="description" content="This is a task management project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="media728.css">
+</head>
 
-                        <img class="index-logo" src="images/timeDeskLogo0.png" alt="">
-                    </a>
-                </div>
-                <div class="daily-planner">Time, Productivity and more,
-                     
-                    Get started with our Daily Planner <br>
-                    <a href="app.html">
-                        <button class="get-started" role="button">Get Started</button>
-                    </a>
-                        
-                </div>
+<body>
+    <div class="Main">
+        <span id="audio"></span>
+        <div class="task-main">
+            <div class="loading">
+                <span class="load1" style="color: rgb(15, 18, 206);">.</span>
+                <span class="load2" style="color: rgb(49, 12, 133);">.</span>
+                <span class="load3" style="color: rgb(19, 19, 175);">.</span>
+            </div>
+            <div class="AlarmNotification">
+                <span class="notiHeading">Alarm Clock</span>
+                <span class="notiTime">00:00</span>
+                <div class="turnOffAlarm">Turn Off</div>
+                <img src="images/notiBell.png" alt="">
+            </div>
+            <div class="study-mode">
+                <div class="snowMOBILE"></div>
+                <div class="zoom-container">
+                    <div class="zoom-timer-btn">Stop Watch</div>
+                    <div class="empty-time">
+                        <div class="stop-w-second">00:00</div>
+                        <span class="stop-w-start startM">START</span>
+                        <span class="stop-w-stop stopM">STOP</span>
+                        <span class="stop-w-reset resetM">RESET</span>
+                    </div>
+                    <div class="zoom-stop-w-btn TimerSet0">Timer</div>
+                    <div class="TimerSet">00:00</div>
+                    <div class="timerSet-empty">
+                        <div class="timer5min">5 min</div>
+                        <div class="timer10min">10 min</div>
+                        <div class="timer30min">30 min</div>
+                        <div class="timer60min">60 min</div>
+                    </div>
+                    <div class="zoom-Alarm-btn">Alarm</div>
+                    <div class="alarmContainer">
+                        <p class="oldAlarm">00:00</p>
+                        <br>
+                        <p class="ChangeAlarm">Change Alarm</p>
+                        <div class="alarmNum">
+                            <select id="hr">
+                            </select>
+                            <select id="Min">
+                            </select>
+                            <div class="setbackground"></div>
+                            <button class="PostAlarm">Set Alarm</button>
+                        </div>
 
+                    </div>
+                    <div class="zoom-clock-btn">Clock</div>
+                    <div class="zoom-features">00:00</div>
+                    <div class="zoom-features-seconds">00</div>
+                    <div class="closebtn">Close</div>
+                    <button class="tools">Tools</button>
+                    <button class="Close-tools">Close</button>
+                    <button class="ShowSeconds">show Seconds</button>
+                    <button class="snow-On-Off">Snow ON</button>
+                    <div class="color-panel">
+                        <div class="color1">palevioletred</div>
+                        <div class="color1">sandybrown</div>
+                        <div class="color1">#758694</div>
+                        <div class="color1">#795757</div>
+                        <div class="color1">rebeccapurple</div>
+                        <div class="color1">#101213</div>
+                        <div class="color1">#134B70</div>
+                        <div class="color1">#0D7C66</div>
+                    </div>
+                    <div class="day-month">Day, Month date</div>
+                </div>
+            </div>
+            <div class="task-panels">
+
+                <div class="right-nav-panels"></div>
+                <div class="clock-current">
+                    <span class="time-heading">Current Time</span>
+                    <span class="time-current"></span>
+                    <span class="time-zoom">Study mode</span>
+                    <hr class="horizontal1">
+                    <span class="timer-count">00:00
+                    </span>
+                    <span class="minutes-heading">minutes</span>
+                    <span class="stop-w-heading">Stop-Watch</span>
+                    <span class="stop-w-start">START</span>
+                    <span class="stop-w-stop">STOP</span>
+                    <span class="stop-w-reset">RESET</span>
+                </div>
+                <div class="panel1">
+                    <div class="Dark-Light-mode">Dark
+                    </div>
+                    <div class="Dark-Light-mode2">Light
+                    </div>
+                    <div class="snow-main-page">Snow
+                    </div>
+                    <div class="Today-text">Today
+                    </div>
+                    <div class="My-Tasks">My Projects
+                    </div>
+                    <div class="task-input-container">
+                    </div>
+                    <button class="get-started add-task">Add Task</button>
+                    <button class="get-started remove-task">Remove Task</button>
+                </div>
             </div>
         </div>
-        <!-- <div class="image"> -->
-            <!-- <div class="Main"> -->
-                <!-- <div class="top-header"> -->
-                    <!-- <img style="filter: invert();" src="https://see.fontimg.com/api/renderfont4/redB/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/VElNRQ/falling-sky-extrabold.png" alt="">
-                    <br>
-                    <img style="filter: invert();" src="https://see.fontimg.com/api/renderfont4/6GZ1/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/REVTSw/falling-sky-boldplus.png" alt=""> -->
-                <!-- <div class="home-logo">
-                    Home
-                </div> -->
-                <!-- <ul class="mid-nav">
-                    <li>WORLD TIME</li>
-                    <li>POMODORO</li>
-                    <li>STOP WATCH</li>
-                    <li>TIMER</li>
-                    <li>DAILY TASKS</li>
-                </ul> -->
-                <!-- <ul class="right-nav">
-                    <li id="time"></li>
-                </ul> -->
-            <!-- </div> -->
-            <!-- <img src="background.jpeg" alt=""> -->
-            <!-- <div class="task-main">
-                <div class="task-panels"> -->
-                    <!-- <img class="logo" src="images/timeDeskLogo0.png" alt="">
-                    <img class="WC-logo" src="images/WorldClockLogo.png" alt="">
-                    <img class="AC-logo" src="images/alarmClock.png" alt="">
-                    <img class="TC-logo" src="images/TImerLogo.png" alt="">
-                    <div class="Side-Nav"></div>    
-                    <div class="Music-Player"></div>
-                    <div class="Music-Player-actual">
-                    </div>
-                    <div class="Music-Heading"><span>Nature Sounds</span><br><br> -->
-                        <!-- <div class="Song-Title"> -->
-                         
-                        <!-- </div> -->
-                        <!-- <div class="Song-Image"></div> -->
-                        <!-- <span id="SongName">Rain</span> -->
-                        <!-- <div class="Music-box">
-                            <div class="Music-Box-bg"></div>
-                            <div class="Previous"><img src="images/left.png" alt=""></div>
-                            <div class="PlayPause"><img src="images/play.png" alt=""><img class="hidden" src="images/pause.png" alt=""></div>
-                            <div class="Next"><img src="images/right.png" alt=""></div>
-                            <div class="Restart"><img src="images/refresh.png" alt=""></div> -->
-                            <!-- <span style="font-size: 10px;">rain</span> -->
-                        <!-- </div>
-                    </div> -->
-                    <!-- <span class="Music-Heading">Nature sounds</span> -->
-                    <!-- <div class="task-panel-bg"> -->
-                        <!-- <div class="panel1-date"></div>    
-                        <div class="addTask">Enter Your Tasks Here !</div>
-                        <input class="taskInput" type="text" placeholder="type a task here . . . ."> -->
-                        <!-- <img src="timeDeskLogo0.png" alt=""> -->
-                    <!-- </div>
-                    <div class="panel1">
-                        <div class="Today-text">Today</div>
-                        <div class="My-Tasks">My Projects</div>
-                        <div class="Input-box">
-                            <input placeholder="Do 30 minutes of yoga !🤧" class="input1" type="text">
-                        </div>
-                        <div class="Input-box">
-                            <input placeholder="college assignment due date Today 🐛" class="input1" type="text">
-                        </div>
-                        <div class="Input-box">
-                            <input placeholder="movie at 5 pm 🤠" class="input1" type="text">
-                        </div>
-                        <div class="Input-box">
-                            <input placeholder="+ Add Task" class="input1" type="text">
-                        </div>
-                        
-                    </div> -->
-                    <!-- <div class="Android"></div> -->
-                    <!-- <div class="panel3"></div> -->
-                <!-- </div>
-            </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-        <script src="app.js" async defer></script>
-        <!-- <script src="snowfall.min.js"></script> -->
-    </body>
+    </div>
+    <script src="app.js" async defer></script>
+    <script src="snowfall.min.js"></script>
+</body>
+
 </html>
