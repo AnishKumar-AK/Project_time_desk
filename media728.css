@@ -1,0 +1,236 @@
+@media only screen and (max-height:840px) {
+    .task-panels{
+        font-weight: 900;
+            /* width: 9rem; */
+            height: 180vh;
+        }
+        /* body{
+            width: 24rem;
+        } */
+}
+@media only screen and (max-height:790px) {
+    .task-panels{
+        font-weight: 900;
+            /* width: 9rem; */
+            height: 200vh;
+        }
+        /* body{
+            width: 24rem;
+        } */
+}
+@media only screen and (max-height:754px) {
+    .task-panels{
+        font-weight: 900;
+            /* width: 9rem; */
+            height: 200vh;
+        }
+        /* body{
+            width: 24rem;
+        } */
+}
+@media only screen and (max-width:430px),(max-height:668px) {
+    .panel1{
+        margin-left: -6rem;
+    }
+    .right-nav-panels{
+        margin: 51.5rem 0 0 -6rem;
+    }
+    .clock-current{
+        margin: 52.5rem 0 0 -5.5rem;
+    }
+}
+@media only screen and (max-width:398px),(max-height:668px) {
+    .task-panels{
+        font-weight: 900;
+            width: 8rem;
+            height: 180vh;
+        }
+        body{
+            width: 21.3rem;
+        }
+       
+        .snowMOBILE{
+            position: absolute;
+            rotate: 90deg;
+            height:46%;
+            margin: 11rem 0 0 -10.9rem;
+            width: 190%;
+            background-color: transparent;
+        }
+        .study-mode{
+            /* rotate: -90deg; */
+            width: 106%;
+            height: 101.6%;
+        }
+        .zoom-features{
+            /* height: 30vh; */
+            margin: -8.5rem 50% 0 6rem;
+        }
+        .color-panel{
+            scale: .7;
+            /* rotate: 90deg; */
+            margin: 1rem 0 0 -26.7rem;
+        }
+        .ShowSeconds{
+            /* rotate: 0deg; */
+            z-index: 4;
+            width: 5.5rem;
+            /* scale: .8; */
+            height: 3rem;
+            margin: 18.6rem 0 0 -5.4rem;
+        }
+        .snow-On-Off{
+            z-index: 4;
+            /* display: none; */
+            /* rotate: 0deg; */
+            width: 4rem;
+            height: 3rem;
+            /* opacity: 0; */
+            margin: 23.5rem 0 0 -4.6rem;
+        }
+        
+        .tools{
+            rotate: 90deg;
+            margin: 28.4rem 0 0 -8.6rem;
+        }
+        .Close-tools{
+            rotate: 90deg;
+            margin: 28rem 0 0 -8.6rem;
+
+        }
+        .tools:hover{
+            margin-left: -8.6rem;
+        }
+        .closebtn{
+            margin: 23.4rem 0 0 16.3rem;
+            scale: .8;
+        }
+}
+
+
+
+@media only screen and (max-width:376px) {
+    .task-panels{
+        font-weight: 900;
+            width: 9.8rem;
+            height: 220vh;
+        }
+        body{
+            user-select: none;
+            width: 22.1rem;
+        }
+        
+        .zoom-features{
+            margin: -9rem 50% 0 5rem;
+        }
+        .day-month{
+
+            margin: 13rem 0 0 -15rem;
+        }
+        .study-mode{
+            height: 102%;
+        }
+        .closebtn{
+            margin: 23rem 0 0 16.3rem;
+            scale: .8;
+        }
+        .color-panel{
+            scale: .8;
+            /* rotate: 90deg; */
+            margin: 3rem 0 0 -27rem;
+        }
+        .ShowSeconds{
+            z-index: 3;
+            rotate: 90deg;
+            margin: 25rem 0 0 -4.2rem;
+        }
+        .snow-On-Off{
+            /* opacity: 1; */
+            /* display: none; */
+            margin: -8.5rem 0 0 -3rem;
+        }
+
+        .zoom-timer-btn{
+        margin:20rem 0 0 12rem;
+
+        }
+        .zoom-Alarm-btn{
+            margin:28rem 0 0 13rem;
+        }
+        
+        .zoom-stop-w-btn{
+            margin:35rem 0 0 13rem;
+            
+        }
+        
+        .zoom-clock-btn{
+     margin:11rem 0 0 12rem;
+            
+        }
+        .zoom-features-seconds{
+            margin: 28rem 0 0 0rem;
+            scale: .6;
+        
+        }
+        .resetM{
+            margin: 34.5rem 0 0 -3rem;
+        
+        }
+        .startM{
+            margin: 21.5rem 0 0 -3rem;
+        }
+        .stopM{
+            margin: 28rem 0 0 -3rem;
+        }
+
+
+
+        .tools{
+            rotate: 90deg;
+            margin: 23.5rem 0 0 -8.6rem;
+        }
+        .Close-tools{
+            rotate: 90deg;
+            margin: 23.5rem 0 0 -8.6rem;
+
+        }
+        .tools:hover{
+            margin-left: -8.6rem;
+        } 
+        .snowMOBILE{
+            position: absolute;
+            rotate: 90deg;
+            display: none;
+            /* height:4%; */
+            /* scale: .8; */
+            margin: -4rem 0 0 1.9rem;
+            /* width: 190%; */
+            background-color: transparent;
+        }
+        
+}
+
+
+
+
+
+@media only screen and (max-height:896px) {
+    .panel1{
+        margin: 1rem 0 0 -6.5rem;
+    }
+
+    .right-nav-panels{
+        margin: 51.5rem 0 0 -6.5rem;
+    }
+    .clock-current{
+        margin: 52.5rem 0 0 -6rem;
+    }
+    .snowMOBILE{
+        position: absolute;
+        rotate: 90deg;
+        height:41%;
+        margin: 15rem 0 0 -10.9rem;
+        width: 190%;
+        background-color: transparent;
+    }
+}
