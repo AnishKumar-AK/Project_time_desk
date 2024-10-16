@@ -12,13 +12,6 @@
     justify-content: space-around;
 }
 body{
-    /* background: url('background.jpeg'); */
-    /* background-image: linear-gradient(to right bottom, #f5e7cf, #f5e6cb, #f5e4c6, #f6e3c2, #f6e1be, #f6dfb8, #f7ddb2, #f7dbac, #f7d8a2, #f8d498, #f8d18f, #f8cd85); */
-    /* background-image: linear-gradient(to right bottom, #f8cd85, #f8d18f, #f8d498, #f7d8a2, #f7dbac, #f7ddb2, #f6dfb8, #f6e1be, #f6e3c2, #f5e4c6, #f5e6cb, #f5e7cf); */
-    /* background-image: linear-gradient(to left top, #f4eb36, #f8e443, #fbde4f, #fdd85a, #fdd265, #fdce6b, #fcca72, #fac678, #f8c27c, #f6bf80, #f3bc84, #f0b988); */
-    /* background: linear-gradient(135deg, rgba(113, 0, 255, 1) 0%, rgba(0, 0, 0, 1) 48%, rgba(208, 62, 120, 1) 100%); */
-    /* background-image: linear-gradient(to top, #c70d56, #cf1559, #d81c5c, #e0235e, #e92961, #e31d67, #dd106d, #d50073, #b8007d, #930086, #64008d, #090a90); */
-    /* background-image: linear-gradient(to right bottom, #ec5f41, #e44965, #cc4484, #a54b9a, #7253a4, #5f4b92, #4d4380, #3e3b6d, #3d2a4c, #311c2f, #1e1118, #000000); */
     background-image: linear-gradient(to right bottom, #d16ba5, #c15ea9, #ac53ad, #934cb3, #7247b8, #5d42b4, #433db0, #1d38ac, #192f9f, #142792, #0e1e85, #071678);
     margin: 0 0 0 0;
     background-repeat: no-repeat;
@@ -33,64 +26,7 @@ body{
     color: white;
     border-color: grey;
 }
-/* .top-header img{ */
-    /*  */
-    /* height: 6vh;
-    margin: 5vh 0 0 12vh; */
-    /* max-width: 100%; */
-/* } */
-/* .home-logo{ */
-    /* padding: 0% 0 0 0rem; */
-    /* font-weight: 900; */
-    /* width: 50rem; */
-    /* height: 4rem; */
-    /* background-color: white; */
-/* } */
-/* .mid-nav{
-    margin: 0rem 0 0 0rem;
-    height: 4rem;    
-    display: flex;
-    flex-direction:row;
-    letter-spacing: 0px;
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    list-style: none;
-}
-.mid-nav li{
-    padding: 3rem 1rem 0 1rem ;
-    font-weight: 900;
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin: 0 1rem 0 0;
-    max-width: 9rem;
-    height: 2rem;
-    
-    font-family: "VT323", monospace;
-    
-} */
 
-/* .right-nav{
-    margin: -2rem 1rem 0 0;
-    display: flex;
-    flex-direction:row-reverse;
-    letter-spacing: 0px;
-    font-family: 'Quicksand',sans-serif;
-    color: white;
-    list-style: none;
-}.right-nav li{
-    text-shadow: 0px 1px 0px rgb(129, 126, 126); 
-    width: 9rem;
-    font-size:25px;
-    font-weight: 900;
-    height: 2rem;
-} */
-/* .task-main{ */
-    /* margin:auto; */
-    /* position: absolute; */
-    /* justify-content: center;
-    display: flex;
-    flex-direction: column; */
-/* } */
 .logo{
     height: 5rem;
     /* width: 25rem; */
@@ -129,17 +65,10 @@ body{
 }
 
 .task-panels{
-    /* display: flex; */
-    /* position: absolute; */
     margin: auto;
     width: 115rem;
     height: 100vh;
-    /* background-color: white; */
-    /* justify-content:left; */
-    /* flex-direction:row; */
-    /* margin: 1rem 0 0 0; */
-    /* opacity: 20%;    */
-    /* margin: auto; */
+  
 }
 
 .panel1{
@@ -209,40 +138,21 @@ body{
     max-height: 34rem;
     overflow: hidden;
 }
-/* .panel1 img{ */
-    /* position: absolute; */
-    /* height: 7vh; */
-    /* filter: invert(1); */
-    /* width: 30vh; */
-/* } */
 .Today-text{
-    /* position: relative; */
-    /* color: #000000; */
     margin: 3rem 0 0 4rem;
     font-weight: 700;
     font-size: 38px;
-    /* height:2rem; */
-    /* width: 2rem; */
 }
 .My-Tasks{
-    /* position: relative; */
-    /* color: #000000; */
     margin: 2rem 0 0 4rem;
     font-weight: 700;
     font-size: 18px;
-    /* height:2rem; */
-    /* width: 2rem; */
 }
 .Input-box-div{
     outline: none;
     color: black;
     width: 55rem;
     height: 5rem;
-    /* opacity: 20%; */
-    /* font-family: "Montserrat", sans-serif; */
-    /* font-weight: 800; */
-    /* overflow-wrap: break-word; */
-    /* font-size: 25px; */
     margin: 2rem 0 0 4rem;
     /* border-radius: 8px; */
     border-width: 0;
@@ -285,16 +195,10 @@ input{
     border-bottom-left-radius: 10px;
     height: 62rem;
     width: 4rem;
-    /* box-shadow:  -2px -2px 2px #d6e4fd,
-    2px 2px 2px #a0f7f7; */
-    /* rotate: 5deg; */
-    /* border: 2px solid rgb(241, 239, 239); */
     opacity: 5%;
     z-index: -1;
     margin: 3.5rem 0rem 0 72rem;
     background-color: #8df1fa;
-    /* color: var(--grey); */
-    /* letter-spacing: 2px; */
 }
 
 .right-nav-panels{
@@ -501,20 +405,13 @@ input{
 }
 
 .load1{
-    /* animation-name: opacity; */
-    /* animation: infinite; */
-    /* animation-delay: 3s; */
     opacity: 100%;
     animation: opacity 1.02s infinite;
-    /* animation-direction: alternate; */
 }
 @keyframes opacity{
     100%{
         opacity: 1000%;
     }
-    /* 100%{
-        opacity: 100%;
-    } */
     50%{
         opacity: 0%;
     }
@@ -522,17 +419,12 @@ input{
 }
 .load2{
     animation: opacity 1s alternate-reverse infinite ;
-    /* animation-delay: s;  */
     margin-left: -3rem;
-    /* animation-duration: 1.2s; */
     
 }
 .load3{
     animation: opacity 0.98s alternate-reverse infinite ;
     margin-left: -3rem;
-
-    /* animation-delay: 1s;  */
-    /* animation-duration: 1.2s; */
     
 }
 .snowMOBILE{
@@ -549,39 +441,21 @@ input{
     display: none;
     /* display: none; */
     z-index: 6;
-    /* opacity: 99%; */
-    /* align-items: center; */
-    /* margin:0 0 0 -5%; */
     width: 100%;
     height: 100%;
     /* transition: 4s; */
     background-color: #101213;
-    /* background-color: palevioletred; */
-    /* background-color: rebeccapurple; */
-    /* background-color: goldenrod; */
-    /* background-color: orangered; */
-    /* background-color: sandybrown; */
 }
 .zoom-container{
-    /* transition: 1s; */
-    /* position: absolute; */
     margin-inline: 22%;
     margin-top: 14%;
     color: white;
     z-index: 8;
-    /* display: none; */
-    /* padding-right: 200rem; */
-    /* background-color: red; */
     height: 20rem;
     width: 30rem;
     /* scale: 4; */
 }
 .zoom-features{
-    /* transition: 1s; */
-    /* transition: .2s; */
-    /* position: ; */
-    /* margin: 40% auto 21.5% 10%; */
-    /* position:fixed; */
     color: white;
     opacity: 100%;
     /* display: none; */
@@ -594,18 +468,6 @@ input{
     /* font-size: 65px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 5px;
-    /* margin: 32vh 20vh 0 55vh; */
-    /* margin-inline-end: 40rem;
-    */
-    /* margin-left:40rem ; */
-    /* margin:15% 0 0 27% ; */
-    /* align-self: center; */
-    /* position: absolute; */
-    /* top:0;
-    bottom: 0;
-    left: 0;
-    right: 0; */
-    /* margin: 20% 50% 0 40%;  */
 }
 .closebtn{
     position: absolute;
@@ -1209,39 +1071,6 @@ option{
     border: none;
     outline: none;
 }
-/* .Side-Nav{
-    position: absolute;
-    height: 20rem;
-    width: 41rem;
-    opacity: 3%;
-    border-radius: 10px;
-    background-color: rgb(141, 241, 250);
-    margin: 15rem 0 0 72rem;
-} */
-/* .panel3{ */
-    /* border: 1px solid rgb(186, 184, 184);
-    border-radius: 1vh;
-    position:     absolute;
-    border-radius: 10px; */
-    /* height: 45vh;
-    width: 43vh; */
-    /* opacity: 30%; */
-    /* margin: 51vh 0rem 0 127vh; */
-    /* background-color: white; */
-    /* color: var(--grey); */
-    /* letter-spacing: 2px; */
-/* }
-.addTask{ */
-    
-    /* font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    padding: 0rem 0 0 2.2rem;
-    font-size: 25px; */
-    /* text-shadow: ; */
-    /* text-shadow: 2px 3px 0px rgb(129, 126, 126);  */
-    
-
-/* } */
 ::placeholder {
     /* color: rgb(4, 4, 4); */
     /* color: ; */
@@ -1249,34 +1078,3 @@ option{
     font-size: 18px;
     font-weight: 400;
   }
-/* .taskInput{ */
-/* outline: none;
-padding-left: 2rem; */
-    /* width: 80vh; */
-    /* height: 5rem; */
-    /* max-height: 20rem;
-    color: black;
-    opacity: 80%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    overflow-wrap: break-word;
-    font-size: 25px;
-    margin: .2rem 0 0 -.3rem;
-    border-radius: 80px;
-    border: 6px solid rgba(209, 213, 219, 0.3); */
-    
-/* }
-.panel1-date{ */
-    /* padding:2rem 0 0 0rem;
-    font-family: "Montserrat", sans-serif;
-    margin: 0rem 0 0 0rem ;
-    height:2rem;
-    width: 25rem;
-    font-size: 13px;
-    font-weight: 900;
-    opacity: 100%; */
-    
-    /* background-color: var(--grey);
-    border-radius: 7px;
-     */
-/* } */
