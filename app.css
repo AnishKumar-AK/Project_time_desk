@@ -839,6 +839,9 @@ select {
     appearance: none;
     -moz-appearance: none;
 }
+select option{
+    background-color: rgb(66, 65, 65);
+}
 
 .alarmNum{
     display: none;
