@@ -146,7 +146,16 @@ const LightModeSet =  function(){
     const divsDark = document.querySelectorAll('.Input-box-div')
 const body = document.querySelector('body')
     taskPanel1.classList.remove('panel1Dark')
-
+    container.forEach((e) =>{
+        e.style['background-color'] = 'white'
+        e.style['border-color'] = 'rgb(243, 240, 240)'
+    })
+    input.forEach((e) =>{
+        e.style.color = 'black'
+        e.style['background-color'] = 'white'
+    })
+    progressBar.style['background-color'] = '#F2F8ED'
+    tabBg.style['background-color'] = 'white'
     divsDark.forEach(e =>{
         e.classList.remove('Input-box-div-dark')
     })
@@ -160,10 +169,22 @@ const body = document.querySelector('body')
 localStorage.setItem('allTasks',JSON.stringify(allTasks))
     
 }
+const progressBar = document.querySelector('.progressBar')
+const tabBg = document.querySelector('.tabBg')
 const darkModeSet =  function(){
+    
     darkMode.style.display = 'none'
 const body = document.querySelector('body')
-
+    progressBar.style['background-color'] = '#101213'
+    container.forEach((e) =>{
+        e.style['background-color'] = '#101213'
+        e.style['border-color'] = 'grey'
+    })
+    input.forEach((e) =>{
+        e.style.color = 'white'
+        e.style['background-color'] = '#101213'
+    })
+    tabBg.style['background-color'] = '#101213'
     LightMode.style.display = 'block'
     taskPanel1.classList.add('panel1Dark')
     const inputDark = document.querySelectorAll('.input-css')

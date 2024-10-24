@@ -1,0 +1,110 @@
+.bg{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.bg-inside{
+    position: absolute;
+    margin: auto;
+    width: 100rem;
+}
+.tabBg{
+    position: absolute;
+    font-family: 'Roboto',sans-serif;
+    height: 20rem;
+    width: 50rem;
+    z-index: 4;
+    scale: 1.1;
+    margin: 1rem 0 0 20rem;
+    border-radius: 20px;
+    background-color: white;
+}
+.progressQuote{
+    position: absolute;
+    margin: 4rem 0 0 2.9rem;
+    font-size: 15px;
+    color: rgb(187, 183, 183);
+}
+.progressBar{
+    position: absolute;
+    height: 2.3rem;
+    width: 50rem;
+    margin: 6rem 0 0 2.5rem;
+    border-radius: 50px;
+    background-color: #F2F8ED;
+}
+.ProgressBarInsideBg{
+    position: absolute;
+    background-color: rgb(15, 195, 15);
+    height: 2rem;
+    border-radius: 50px;
+    width: 0%;
+    transition: .8s;
+}
+.ProgressValue{
+    position: absolute;
+    width: 50rem;
+    margin-top: .5rem;
+    text-align: center;
+    opacity: 50%;
+}
+.ErrorLabel{
+    position: absolute;
+    margin: 9rem 0 0 2.8rem;
+    font-size: 15px;
+    color: rgb(250, 0, 0);
+    opacity: 0%;
+}
+.errorLabel-on{
+    opacity: 100%;
+}
+.TaskContainer{
+    display: flex;
+    flex-direction: column;
+    width: 44rem;
+    height: 50rem;
+    margin: 10rem 0 0 2.5rem;
+}
+.TaskContainer2{
+    border-style: solid;
+    position: relative;
+    border-color: rgb(243, 240, 240);
+    width: 50rem;
+    height: 4rem;
+    /* color: ; */
+    border-radius: 20px;
+    margin: 1.2rem 0rem 0rem 0rem;
+    background-color: white;
+}
+.TaskInputBox{
+    position: absolute;
+    outline: none;
+    font-size: 1.1rem;
+    border: none;
+    color: black;
+    height: 2.5rem;
+    width: 45rem;
+     margin: .7rem 0 0 4rem;
+    background-color: white; 
+}
+.TaskInputBoxChecked {
+    color: green;
+}
+.checked .TaskInputBox{
+    text-decoration: line-through;
+    color: green;
+}
+.checkButton{
+    position: absolute;
+    height: 1.5rem;
+    border-style: solid;
+    border-color: rgb(155, 154, 154);
+    border-width: 1px;
+    margin: 1.2rem 0 0 1.8rem;
+    width: 1.5rem;
+    cursor:pointer;
+    border-radius: 25px;
+}
+.checkButtonClicked{
+    background-color: green;
+}

@@ -7,6 +7,9 @@
         /* body{
             width: 24rem;
         } */
+        main{
+            display: none;
+           }
 }
 @media only screen and (max-height:790px) {
     .task-panels{
@@ -17,6 +20,9 @@
         /* body{
             width: 24rem;
         } */
+        main{
+            display: none;
+           }
 }
 @media only screen and (max-height:754px) {
     .task-panels{
@@ -27,11 +33,17 @@
         /* body{
             width: 24rem;
         } */
+        main{
+            display: none;
+           }
 }
 @media only screen and (max-width:430px),(max-height:668px) {
     .panel1{
         margin-left: -6rem;
     }
+    main{
+        display: none;
+       }
     .right-nav-panels{
         margin: 51.5rem 0 0 -6rem;
     }
@@ -48,6 +60,11 @@
         body{
             width: 21.3rem;
         }
+       main{
+        display: none;
+       }
+  
+
        
         .snowMOBILE{
             position: absolute;
@@ -115,6 +132,9 @@
             width: 9.8rem;
             height: 220vh;
         }
+        main{
+            display: none;
+           }
         body{
             user-select: none;
             width: 22.1rem;
@@ -218,7 +238,9 @@
     .panel1{
         margin: 1rem 0 0 -6.5rem;
     }
-
+    main{
+        display: none;
+       }
     .right-nav-panels{
         margin: 51.5rem 0 0 -6.5rem;
     }

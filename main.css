@@ -231,6 +231,7 @@
     outline:1px solid white;
 }
 .add-task{
+    /* display: none; */
     scale: 1.1;
     z-index: 2;
     position: absolute;
@@ -238,6 +239,7 @@
     /* opacity: 90%; */
 }
 .remove-task{
+    /* display: none; */
     /* opacity: 80%; */
     display: flex;
     z-index: 2;

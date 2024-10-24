@@ -7,10 +7,13 @@
     <title>Time Desk</title>
     <meta name="description" content="This is a task management project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="media728.css">
+    <link rel="stylesheet" href="todo.css">
+
 </head>
 
 <body>
@@ -111,6 +114,46 @@
                     </div>
                     <div class="task-input-container">
                     </div>
+                    <main>
+                        <div class="bg">
+                            <div class="bg-inside">
+                                <div class="tabBg">
+                                    <span class="progressQuote">Raise The Bar By Completing Your Goals!</span>
+                                    <div class="progressBar">
+                                        <div class="ProgressBarInsideBg">
+                                            <span class="ProgressValue">0/0</span>
+                                        </div>
+                                    </div>
+                                    <span class="ErrorLabel">Please fill all the goals</span>
+                                    
+                                    <div class="TaskContainer">
+                                        <div id="first" class="TaskContainer2">
+                                            <input id="FirstInputBox" class="TaskInputBox" type="text" placeholder="Type A Value">
+                                            <div id="FirstCheckButton" class="checkButton"></div>
+                                        </div>
+                                        <div id="second" class="TaskContainer2">
+                                            <input id="SecondInputBox" class="TaskInputBox" type="text" placeholder="Type A Value">
+                                            <div id="SecondCheckButton" class="checkButton"></div>
+                                        </div>
+                                        <div id="Third" class="TaskContainer2">
+                                            <input id="ThirdInputBox" class="TaskInputBox" type="text" placeholder="Type A Value">
+                                            <div id="ThirdCheckButton" class="checkButton"></div>
+                                        </div>
+                                        <div id="Fourth" class="TaskContainer2">
+                                            <input id="FourthInputBox" class="TaskInputBox" type="text" placeholder="Type A Value">
+                                            <div id="FourthCheckButton" class="checkButton"></div>
+                                        </div>
+                                        <div id="Fifth" class="TaskContainer2">
+                                            <input id="FifthInputBox" class="TaskInputBox" type="text" placeholder="Type A Value">
+                                            <div id="FifthCheckButton" class="checkButton"></div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
                     <button class="get-started add-task">Add Task</button>
                     <button class="get-started remove-task">Remove Task</button>
                 </div>
@@ -118,6 +161,8 @@
         </div>
     </div>
     <script src="app.js" async defer></script>
+    <script src="appTodo.js"></script>
+
     <script src="snowfall.min.js"></script>
 </body>
 

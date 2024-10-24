@@ -139,12 +139,12 @@ body{
     overflow: hidden;
 }
 .Today-text{
-    margin: 3rem 0 0 4rem;
+    margin: 3rem 0 0 5.5rem;
     font-weight: 700;
     font-size: 38px;
 }
 .My-Tasks{
-    margin: 2rem 0 0 4rem;
+    margin: 2rem 0 0 5.5rem;
     font-weight: 700;
     font-size: 18px;
 }
